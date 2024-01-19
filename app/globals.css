@@ -12,6 +12,7 @@
 	object-position: center;
 	border-radius: 10px;
 	filter: brightness(80%);
+	user-select: none;
 }
 /* carousel item */
 .carousel-btn {

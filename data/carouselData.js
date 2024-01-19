@@ -3,7 +3,7 @@ export const carouselData = [
 		id: 1,
 		title: 'oddiy Bogibek brat title',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris ultricies rutrum urna, id volutpat justo fringilla nec. Maecenas vestibulum massa eget tincidunt tempus. Sed ',
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris ultricies rutrum urna',
 		category: 'oddiy',
 		imgLink: '/carousel-1.jpeg',
 	},

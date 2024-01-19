@@ -40,7 +40,7 @@ const MainCarousel = () => {
 		<Box mt={'40px'}>
 			<Carousel
 				autoplay={true}
-				wrapAround={carouselData.length > 1 ? true : false}
+				wrapAround={true}
 				pauseOnHover={true}
 				renderCenterLeftControls={carouselPreviousBtn}
 				renderCenterRightControls={carouselNextBtn}
@@ -52,6 +52,7 @@ const MainCarousel = () => {
 							alt={carouselItem.title}
 							width={1000}
 							height={400}
+							draggable={false}
 							className={'carousel-img'}
 						/>
 						<Box
