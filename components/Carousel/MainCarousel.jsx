@@ -7,7 +7,7 @@ import Carousel from 'nuka-carousel'
 const MainCarousel = () => {
 	//   carousel previous btn
 	const carouselPreviousBtn = ({ previousSlide }) => (
-		<button
+		<div
 			onClick={previousSlide}
 			className={'carousel-btn'}
 			style={{ marginLeft: '10px' }}
@@ -18,11 +18,11 @@ const MainCarousel = () => {
 				width={30}
 				height={30}
 			/>
-		</button>
+		</div>
 	)
 
 	const carouselNextBtn = ({ nextSlide }) => (
-		<button
+		<div
 			onClick={nextSlide}
 			className={'carousel-btn'}
 			style={{ marginRight: '10px' }}
@@ -33,7 +33,7 @@ const MainCarousel = () => {
 				width={30}
 				height={30}
 			/>
-		</button>
+		</div>
 	)
 
 	return (
@@ -88,6 +88,7 @@ const MainCarousel = () => {
 								{carouselItem.description}
 							</Text>
 							<Button
+								mt={{ base: '30px', md: '0' }}
 								size={'lg'}
 								textColor={'white'}
 								variant={'outline'}
