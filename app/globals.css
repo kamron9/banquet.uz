@@ -1,8 +1,19 @@
 .header {
 	border-bottom: 1px solid #0f172a1a;
 	height: fit-content;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(8px);
 }
-
+.main{
+	padding: 100px 0;
+	min-height: 100vh;
+	background-color: rgba(222, 222, 226, 0.22);
+}
 /* carousel img style */
 .carousel-img {
 	width: 100%;

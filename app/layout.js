@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className} suppressHydrationWarning={true}>
         <ChakraProvider>
           <Header />
-          <main>
+          <main className={"main"}>
             <Container maxW={"1400px"}>{children}</Container>
           </main>
         </ChakraProvider>
