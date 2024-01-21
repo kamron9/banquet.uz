@@ -56,6 +56,9 @@
 }
 
 /* changing about card  style */
+/*.about-card:not(:first-child){*/
+/*	margin-top: 100px;*/
+/*}*/
 .card-img-wrapper{
 	position: absolute;
 	top: -100px;
@@ -91,7 +94,16 @@
 	overflow: hidden;
 }
 
-
+@media screen and (max-width: 991.9px) {
+	.about-card:first-child,.about-card:nth-child(2){
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 479.9px) {
+	.about-card:nth-child(2){
+		margin-top: 100px;
+	}
+}
 @media screen and (max-width: 400px) {
 	.carousel-img {
 		height: 400px;

@@ -25,9 +25,9 @@ const fetchingAboutData = async () => {
 const AboutCard = async () => {
   const cardData = (await fetchingAboutData()) || [];
 
-  const date = `${new Date().getDate()},${
+  const date = `${new Date().getDate()}.${
     new Date().getMonth() + 1
-  },${new Date().getFullYear()}`;
+  }.${new Date().getFullYear()}`;
 
   return (
     <Box my={"100px"}>
@@ -44,8 +44,8 @@ const AboutCard = async () => {
             position={"relative"}
             mt={{ base: "100px", lg: "0" }}
             key={data.id}
-            className={"card-shadow"}
-            height={400}
+            className={"card-shadow about-card"}
+            height={350}
             backgroundColor={"white"}
             borderRadius={12}
           >
@@ -59,9 +59,6 @@ const AboutCard = async () => {
               />
             </Box>
             <Box className={"about-card-content"}>
-              <Text as={"span"} fontSize={"14px"} color={"gray"}>
-                {date}
-              </Text>
               <Heading as={"h2"} size={"md"} my={"10px"}>
                 {data.title}
               </Heading>
@@ -74,7 +71,10 @@ const AboutCard = async () => {
               textAlign={"center"}
               width={"100%"}
             >
-              <Button colorScheme={"facebook"}>read more</Button>
+              <Text as={"span"} fontSize={"14px"} color={"gray"}>
+                {date}
+              </Text>
+              {/*<Button colorScheme={"facebook"}>read more</Button>*/}
             </Box>
           </GridItem>
         ))}
