@@ -42,8 +42,7 @@ const AboutCard = async () => {
         {cardData.map((data) => (
           <GridItem
             position={"relative"}
-            _notFirst={{ mt: "100px" }}
-            // mt={{ base: "100px", lg: "0" }}
+            mt={{ base: "100px", lg: "0" }}
             key={data.id}
             className={"card-shadow"}
             height={400}
