@@ -40,10 +40,9 @@ const Header = () => {
               </List>
             </Box>
           </Box>
-          {/*  arenda &  zakaz  */}
+          {/*  buyurtma berish  */}
           <Box display={"flex"} alignItems={"center"} gap={"10px"}>
-            <Button colorScheme={"green"}>arenda</Button>
-            <Button colorScheme={"blue"}>zakaz</Button>
+            <Button colorScheme={"purple"}>buyurtma berish</Button>
           </Box>
         </Box>
       </Container>
