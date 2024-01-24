@@ -7,6 +7,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import ChooseLanguage from "@/components/Header/ChooseLanguage";
 
 const Header = () => {
   // toast shows when send btn clicked
@@ -46,6 +47,7 @@ const Header = () => {
           {/*  buyurtma berish  */}
           <Box display={"flex"} alignItems={"center"} gap={"10px"}>
             <Button colorScheme={"purple"}>buyurtma berish</Button>
+            <ChooseLanguage />
           </Box>
         </Box>
       </Container>

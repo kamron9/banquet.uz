@@ -32,7 +32,7 @@ const Footer = () => {
           gap={"30px"}
         >
           {/* logo */}
-          <Box display={"flex"} flexDirection={"column"} gap={"5px"}>
+          <Box display={"flex"} flexDirection={"column"} gap={"10px"}>
             <Heading>Logo</Heading>
             {/* contacts */}
             <Box>
