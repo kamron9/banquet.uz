@@ -4,10 +4,8 @@ import AboutCard from "@/components/AboutCompany/AboutCard";
 
 const AboutCompany = () => {
   return (
-    <Box>
-      <Heading size={"lg"} mt={"50px"}>
-        Biz Haqimizda
-      </Heading>
+    <Box border={"1px solid blue"} id={"about"} mt={"50px"}>
+      <Heading size={"lg"}>Biz Haqimizda</Heading>
       <AboutCard />
     </Box>
   );

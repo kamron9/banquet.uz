@@ -103,6 +103,7 @@ const Footer = () => {
                 alt={"telegram icon"}
                 width={20}
                 height={20}
+                style={{ width: "25px", height: "25px" }}
               />
             </a>
             {/* instagram icon */}
@@ -112,6 +113,7 @@ const Footer = () => {
                 alt={"telegram icon"}
                 width={20}
                 height={20}
+                style={{ width: "25px", height: "25px" }}
               />
             </a>
             {/* facebook icon */}
@@ -121,6 +123,7 @@ const Footer = () => {
                 alt={"telegram icon"}
                 width={20}
                 height={20}
+                style={{ width: "25px", height: "25px" }}
               />
             </a>
           </Box>

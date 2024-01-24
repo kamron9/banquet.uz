@@ -32,7 +32,9 @@ const Header = () => {
                   <Link href={"/"}>home</Link>
                 </ListItem>
                 <ListItem>
-                  <Link href={"/"}>about</Link>
+                  <Link href={"#about"} scroll={true}>
+                    about
+                  </Link>
                 </ListItem>
                 <ListItem>
                   <Link href={"/"}>contact</Link>
