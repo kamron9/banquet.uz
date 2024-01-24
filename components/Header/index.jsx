@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 
 const Header = () => {
+  // toast shows when send btn clicked
   return (
     <header className={"header"}>
       <Container maxW={"1400px"}>

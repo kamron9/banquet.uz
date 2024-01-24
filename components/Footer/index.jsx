@@ -1,8 +1,26 @@
-import { Box, Button, Container, Heading, Input, Text } from "@chakra-ui/react";
+"use client";
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Input,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
+  //toast shows when send btn clicked
+  const toast = useToast();
+  const handleData = () => {
+    toast({
+      title: "Raxmat, 24 soat ichida mutahasisimiz siz bilan bog'lanadi",
+      status: "success",
+      duration: 4000,
+    });
+  };
   return (
     <Box as={"footer"} bg={"rgb(244 245 247)"} padding={"40px 0"}>
       <Container maxW={"1400px"}>
@@ -79,7 +97,9 @@ const Footer = () => {
                 placeholder={"enter your name"}
               />
               <Input placeholder={"your number"} border={"1px solid gray"} />
-              <Button colorScheme={"purple"}>send</Button>
+              <Button colorScheme={"purple"} onClick={handleData}>
+                send
+              </Button>
             </Box>
           </Box>
         </Box>
