@@ -3,6 +3,7 @@ import "./globals.css";
 import { ChakraProvider } from "@/providers/ChakraProvider";
 import Header from "@/components/Header";
 import { Container } from "@chakra-ui/react";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <main className={"main"}>
             <Container maxW={"1400px"}>{children}</Container>
           </main>
+          <Footer />
         </ChakraProvider>
       </body>
     </html>

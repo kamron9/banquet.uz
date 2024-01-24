@@ -94,12 +94,20 @@
 	overflow: hidden;
 }
 
-@media screen and (max-width: 991.9px) {
-	.about-card:first-child,.about-card:nth-child(2){
+@media screen and (max-width: 992px) {
+	.about-card{
+		margin-top: 100px;
+	}
+	.about-card:nth-child(2){
 		margin-top: 0;
 	}
+	.about-card:first-child{
+		margin-top: 0;
+	}
+
+
 }
-@media screen and (max-width: 479.9px) {
+@media screen and (max-width: 480px) {
 	.about-card:nth-child(2){
 		margin-top: 100px;
 	}
