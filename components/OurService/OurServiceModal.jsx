@@ -108,7 +108,7 @@ export default function OurServiceModal() {
                     left={"10px"}
                     zIndex={2}
                   >
-                    standard
+                    premium
                   </Text>
                 </Link>
               </ListItem>
