@@ -30,9 +30,12 @@ const Header = () => {
           {/*  header logo & navigations  */}
           <Box display={"flex"} alignItems={"center"} gap={"20px"}>
             {/* logo */}
-            <Heading size={"lg"} mr={"70px"}>
-              logo
-            </Heading>
+            <Link href={"/"}>
+              <Heading size={"lg"} mr={"70px"}>
+                logo
+              </Heading>
+            </Link>
+
             {/* navigations */}
             <Box as={"nav"} display={{ base: "none", md: "block" }}>
               <List display={"flex"} alignItems={"center"} gap={"20px"}>
