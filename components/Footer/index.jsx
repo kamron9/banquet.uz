@@ -22,7 +22,7 @@ const Footer = () => {
     });
   };
   return (
-    <Box as={"footer"} bg={"rgb(244 245 247)"} padding={"40px 0"}>
+    <Box as={"footer"} id={"footer"} bg={"rgb(244 245 247)"} padding={"40px 0"}>
       <Container maxW={"1400px"}>
         <Box
           display={"flex"}

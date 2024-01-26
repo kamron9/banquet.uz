@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Button,
@@ -8,9 +9,14 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import ChooseLanguage from "@/components/Header/ChooseLanguage";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const params = usePathname();
   // toast shows when send btn clicked
+  const navigateTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <header className={"header"}>
       <Container maxW={"1400px"}>
@@ -31,22 +37,26 @@ const Header = () => {
             <Box as={"nav"} display={{ base: "none", md: "block" }}>
               <List display={"flex"} alignItems={"center"} gap={"20px"}>
                 <ListItem>
-                  <Link href={"/"}>home</Link>
+                  <Link href={"/"} style={{ cursor: "pointer" }}>
+                    home
+                  </Link>
                 </ListItem>
                 <ListItem>
-                  <Link href={"#about"} scroll={true}>
+                  <Link href={"/#about"} scroll={true}>
                     about
                   </Link>
                 </ListItem>
                 <ListItem>
-                  <Link href={"/"}>contact</Link>
+                  <Link href={"#footer"}>contact</Link>
                 </ListItem>
               </List>
             </Box>
           </Box>
           {/*  buyurtma berish  */}
           <Box display={"flex"} alignItems={"center"} gap={"10px"}>
-            <Button colorScheme={"purple"}>buyurtma berish</Button>
+            <Link href={"/xizmatlar"}>
+              <Button colorScheme={"purple"}>xizmatlar</Button>
+            </Link>
             <ChooseLanguage />
           </Box>
         </Box>

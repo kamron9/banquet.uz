@@ -4,6 +4,7 @@ import { ChakraProvider } from "@/providers/ChakraProvider";
 import Header from "@/components/Header";
 import { Container } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
+import OurServiceModalProvider from "@/context/OurServiceModalContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
         <ChakraProvider>
-          <Header />
-          <main className={"main"}>
-            <Container maxW={"1400px"}>{children}</Container>
-          </main>
-          <Footer />
+          <OurServiceModalProvider>
+            <Header />
+            <main className={"main"}>
+              <Container maxW={"1400px"}>{children}</Container>
+            </main>
+            <Footer />
+          </OurServiceModalProvider>
         </ChakraProvider>
       </body>
     </html>
