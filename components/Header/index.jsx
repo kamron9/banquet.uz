@@ -40,18 +40,16 @@ const Header = () => {
 						<Box as={'nav'} display={{ base: 'none', md: 'block' }}>
 							<List display={'flex'} alignItems={'center'} gap={'20px'}>
 								<ListItem>
-									<Link href={'/'} style={{ cursor: 'pointer' }}>
-										home
-									</Link>
+									<Link href={'/#about'}>biz haqimizda</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'#about'}>about</Link>
+									<Link href={'/#statistic'}>statistika</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'#gallery'}>gallery</Link>
+									<Link href={'/#gallery'}>galeraya</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'#footer'}>contact</Link>
+									<Link href={'#footer'}>bog'lanish</Link>
 								</ListItem>
 							</List>
 						</Box>

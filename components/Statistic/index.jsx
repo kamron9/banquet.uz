@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Statistic = () => {
 	return (
-		<Box as='section' mb={'50px'}>
+		<Box as='section' mb={'50px'} id='statistic'>
 			<Heading size={'lg'} mb={'30px'}>
 				Statistika
 			</Heading>
