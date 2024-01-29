@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import { imgData } from '@/data/imgData'
 import { Box, Heading } from '@chakra-ui/react'
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import styles from './style.module.css'
 const PhotoGallery = () => {
 	return (
 		<Box>
-			<Heading size={'lg'} mb={'30px'}>
+			<Heading size={'lg'} mb={'30px'} id='gallery'>
 				Tadbirdan Lavhalar
 			</Heading>
 			{/*    gallery */}
@@ -16,6 +16,7 @@ const PhotoGallery = () => {
 					{imgData.map((image, index) => (
 						<Image
 							key={index}
+							draggable={false}
 							className={styles.galleryImg}
 							src={image}
 							alt={'party${index}'}
@@ -32,6 +33,7 @@ const PhotoGallery = () => {
 							key={index}
 							className={styles.galleryImg}
 							src={image}
+							draggable={false}
 							alt={'party${index}'}
 							width={'200'}
 							height={100}

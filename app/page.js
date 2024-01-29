@@ -1,13 +1,15 @@
-import MainCarousel from "@/components/Carousel/MainCarousel";
-import AboutCompany from "@/components/AboutCompany";
-import PhotoGallery from "@/components/PhotoGallery";
+import AboutCompany from '@/components/AboutCompany'
+import MainCarousel from '@/components/Carousel/MainCarousel'
+import PhotoGallery from '@/components/PhotoGallery'
+import Statistic from '@/components/Statistic'
 
 export default function Home() {
-  return (
-    <div>
-      <MainCarousel />
-      <AboutCompany />
-      <PhotoGallery />
-    </div>
-  );
+	return (
+		<div>
+			<MainCarousel />
+			<AboutCompany />
+			<Statistic />
+			<PhotoGallery />
+		</div>
+	)
 }
