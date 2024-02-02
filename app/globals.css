@@ -133,7 +133,8 @@ body {
 	}
 }
 @media screen and (max-width: 400px) {
-	.carousel-img {
-		height: 400px;
+	.carousel-img,
+	.carousel-skeleton {
+		height: 400px !important;
 	}
 }

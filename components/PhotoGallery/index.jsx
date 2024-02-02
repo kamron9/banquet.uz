@@ -1,10 +1,12 @@
 // 'use client'
-import { imgData } from '@/data/imgData'
+import getPhotoGallery from '@/service/server/PhotoGalleryService'
 import { Box, Heading } from '@chakra-ui/react'
 import Image from 'next/image'
 import styles from './style.module.css'
 
-const PhotoGallery = () => {
+const PhotoGallery = async () => {
+	const photoData = (await getPhotoGallery()) || []
+	console.log(photoData)
 	return (
 		<Box>
 			<Heading size={'lg'} mb={'30px'} id='gallery'>
@@ -13,13 +15,13 @@ const PhotoGallery = () => {
 			{/*    gallery */}
 			<Box className={styles.galleryScroller}>
 				<Box className={styles.galleryScroller__inner_reversed}>
-					{imgData.map((image, index) => (
+					{photoData.map(data => (
 						<Image
-							key={index}
+							key={data.id}
 							draggable={false}
 							className={styles.galleryImg}
-							src={image}
-							alt={'party${index}'}
+							src={data.photo}
+							alt={data.name}
 							width={'200'}
 							height={100}
 							aria-hidden={true}
@@ -28,13 +30,13 @@ const PhotoGallery = () => {
 				</Box>
 
 				<Box className={styles.galleryScroller__inner}>
-					{imgData.map((image, index) => (
+					{photoData.map(data => (
 						<Image
-							key={index}
+							key={data.id}
 							className={styles.galleryImg}
-							src={image}
+							src={data.photo}
 							draggable={false}
-							alt={'party${index}'}
+							alt={data.name}
 							width={'200'}
 							height={100}
 							aria-hidden={true}

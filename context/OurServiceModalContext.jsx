@@ -1,23 +1,24 @@
-"use client";
-import { createContext, useContext, useState } from "react";
+'use client'
+import { createContext, useContext, useState } from 'react'
 
-const OurServiceModalContext = createContext(null);
-export const useOurServiceModal = () => useContext(OurServiceModalContext);
+const OurServiceModalContext = createContext(null)
+export const useOurServiceModal = () => useContext(OurServiceModalContext)
 
 const OurServiceModalProvider = ({ children }) => {
-  const [show, setShow] = useState(false);
+	const [isOpen, setIsOpen] = useState(false)
+	// const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const showModal = () => {
-    setShow(true);
-  };
-  const closeModal = () => {
-    setShow(false);
-  };
-  return (
-    <OurServiceModalContext.Provider value={{ show, showModal, closeModal }}>
-      {children}
-    </OurServiceModalContext.Provider>
-  );
-};
+	const onOpen = () => {
+		setIsOpen(true)
+	}
+	const onClose = () => {
+		setIsOpen(false)
+	}
+	return (
+		<OurServiceModalContext.Provider value={{ isOpen, onOpen, onClose }}>
+			{children}
+		</OurServiceModalContext.Provider>
+	)
+}
 
-export default OurServiceModalProvider;
+export default OurServiceModalProvider
