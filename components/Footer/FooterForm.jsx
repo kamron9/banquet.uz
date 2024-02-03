@@ -8,12 +8,12 @@ import {
 	useToast,
 } from '@chakra-ui/react'
 import axios from 'axios'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const FooterForm = () => {
 	const toast = useToast()
+	const [numberInputValue, setNumberInputValue] = useState('')
 	const inputNameRef = useRef(null)
-	const inputPhoneRef = useRef(null)
 
 	const postForm = async () => {
 		try {
@@ -21,7 +21,7 @@ const FooterForm = () => {
 				'https://shohruhbekk.pythonanywhere.com/contact',
 				{
 					full_name: inputNameRef.current.value,
-					phone: inputPhoneRef.current.value,
+					phone: 55,
 				}
 			)
 			const res = await form.data
@@ -41,7 +41,13 @@ const FooterForm = () => {
 		})
 	}
 	const handleNumberInput = e => {
-		console.log(e.target.value)
+		let value = parseInt(e.target.value)
+		if (value === NaN) {
+			console.log(value)
+			setNumberInputValue('')
+		} else {
+			setNumberInputValue(value)
+		}
 	}
 	return (
 		<Box maxW={'300px'} display={'flex'} flexDirection={'column'} gap={'5px'}>
@@ -53,9 +59,9 @@ const FooterForm = () => {
 				<InputGroup>
 					<InputLeftAddon>+998</InputLeftAddon>
 					<Input
-						ref={inputPhoneRef}
 						onChange={handleNumberInput}
 						type='tel'
+						value={numberInputValue}
 						inputMode='numeric'
 						placeholder={'your number'}
 						maxLength={9}
