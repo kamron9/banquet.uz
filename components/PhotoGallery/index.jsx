@@ -6,7 +6,7 @@ import styles from './style.module.css'
 
 const PhotoGallery = async () => {
 	const photoData = (await getPhotoGallery()) || []
-	console.log(photoData)
+
 	return (
 		<Box>
 			<Heading size={'lg'} mb={'30px'} id='gallery'>
