@@ -1,26 +1,65 @@
-export const carouselData = [
-  {
-    id: 1,
-    title: "carousel title-1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris ultricies rutrum urna",
-    category: "oddiy",
-    imgLink: "/carousel-1.jpeg",
-  },
-  {
-    id: 2,
-    title: "carousel  title-2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris ultricies rutrum urna, id volutpat justo fringilla nec. Maecenas vestibulum massa eget tincidunt tempus. Sed ",
-    category: "oddiy",
-    imgLink: "/carousel-2.avif",
-  },
-  {
-    id: 3,
-    title: "carousel title-3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris ultricies rutrum urna, id volutpat justo fringilla nec. Maecenas vestibulum massa eget tincidunt tempus. Sed ",
-    category: "oddiy",
-    imgLink: "/carousel-1.jpeg",
-  },
-];
+export const oddiyData = [
+	{
+		id: 1,
+		title: 'product  title-1',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 15000,
+	},
+	{
+		id: 2,
+		title: 'product  title-2',
+		category: 'oddiy',
+		imgLink: '/carousel-2.avif',
+		price: 20000,
+	},
+	{
+		id: 3,
+		title: 'product title-3',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 50000,
+	},
+	{
+		id: 4,
+		title: 'product  title-4',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 15000,
+	},
+	{
+		id: 5,
+		title: 'product  title-5',
+		category: 'oddiy',
+		imgLink: '/carousel-2.avif',
+		price: 20000,
+	},
+	{
+		id: 6,
+		title: 'product title-6',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 50000,
+	},
+	{
+		id: 7,
+		title: 'product  title-8',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 15000,
+	},
+	{
+		id: 8,
+		title: 'product  title-8',
+		category: 'oddiy',
+		imgLink: '/carousel-2.avif',
+		price: 20000,
+	},
+	{
+		id: 9,
+		title: 'product title-9',
+		category: 'oddiy',
+		imgLink: '/carousel-1.jpeg',
+		price: 50000,
+	},
+]

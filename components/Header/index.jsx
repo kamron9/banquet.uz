@@ -9,14 +9,8 @@ import {
 	ListItem,
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 const Header = () => {
-	const params = usePathname()
-	// toast shows when send btn clicked
-	const navigateTop = () => {
-		window.scrollTo(0, 0)
-	}
 	return (
 		<header className={'header'}>
 			<Container maxW={'1400px'}>

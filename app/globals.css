@@ -61,43 +61,6 @@ body {
 	overflow: hidden;
 }
 
-/* changing about card  style */
-
-.card-img-wrapper {
-	position: absolute;
-	top: -100px;
-	width: 100%;
-	height: 250px;
-	scale: 0.75;
-}
-
-.about-card-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 12px;
-}
-.card-shadow {
-	-webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
-	-moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
-	box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
-}
-.about-card-content {
-	position: absolute;
-	top: 130px;
-	text-align: center;
-	padding: 0 20px;
-}
-.about-card-text {
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}
-
 /*  service design */
 .our-service-list__item {
 	position: relative;
@@ -118,22 +81,6 @@ body {
 /* remove type number input right side arrows */
 input[type='number']::-webkit-inner-spin-button {
 	display: none;
-}
-@media screen and (max-width: 992px) {
-	.about-card {
-		margin-top: 100px;
-	}
-	.about-card:nth-child(2) {
-		margin-top: 0;
-	}
-	.about-card:first-child {
-		margin-top: 0;
-	}
-}
-@media screen and (max-width: 480px) {
-	.about-card:nth-child(2) {
-		margin-top: 100px;
-	}
 }
 @media screen and (max-width: 400px) {
 	.carousel-img,

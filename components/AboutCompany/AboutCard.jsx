@@ -1,6 +1,7 @@
 import getAboutCompany from '@/service/server/AboutCompanyService'
 import { Box, Button, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import styles from './style.module.css'
 
 const AboutCard = async () => {
 	const cardData = (await getAboutCompany()) || []
@@ -19,25 +20,25 @@ const AboutCard = async () => {
 					<GridItem
 						position={'relative'}
 						key={data.id}
-						className={'card-shadow about-card'}
+						className={styles.about_card}
 						height={350}
 						backgroundColor={'white'}
 						borderRadius={12}
 					>
-						<Box className={'card-img-wrapper'}>
+						<Box className={styles.card_img_wrapper}>
 							<Image
 								width={300}
 								height={150}
 								src={data.image}
 								alt={data.title}
-								className={'about-card-img'}
+								className={styles.about_card_img}
 							/>
 						</Box>
-						<Box className={'about-card-content'}>
+						<Box className={styles.about_card_content}>
 							<Heading as={'h2'} size={'md'} my={'10px'}>
 								{data.title}
 							</Heading>
-							<Text className={'about-card-text'}>{data.description}</Text>
+							<Text className={styles.about_card_text}>{data.description}</Text>
 						</Box>
 						{/* card footer */}
 						<Box
