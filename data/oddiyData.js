@@ -63,3 +63,41 @@ export const oddiyData = [
 		price: 50000,
 	},
 ]
+
+export const extraServiceData = [
+	{
+		id: 1,
+		title: 'issitgich',
+		checked: false,
+		photo: '/carousel-1.jpeg',
+		price: 15000,
+	},
+	{
+		id: 2,
+		title: 'sovutgich',
+		checked: false,
+		photo: '/carousel-1.jpeg',
+		price: 17000,
+	},
+	{
+		id: 3,
+		title: "qo'shimcha 1",
+		checked: false,
+		photo: '/carousel-1.jpeg',
+		price: 25000,
+	},
+	{
+		id: 4,
+		title: "qo'shimcha-3",
+		checked: false,
+		photo: '/carousel-1.jpeg',
+		price: 35000,
+	},
+	{
+		id: 5,
+		title: "qo'shimcha 5",
+		checked: false,
+		photo: '/carousel-1.jpeg',
+		price: 55000,
+	},
+]

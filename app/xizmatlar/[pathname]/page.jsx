@@ -1,5 +1,11 @@
+import OurService from '@/components/generic/OurService/OurService'
+
 const AllService = () => {
-	return <div>AllService</div>
+	return (
+		<div>
+			<OurService />
+		</div>
+	)
 }
 
 export default AllService

@@ -1,10 +1,11 @@
 'use client'
-// import { carouselData } from '@/data/carouselData'
 import CarouselService from '@/service/client/CarouselService'
 import { Box, Button, Heading, Skeleton, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Carousel from 'nuka-carousel'
 import { useEffect, useState } from 'react'
+import { CarouselNextBtn, carouselPreviousBtn } from './CarouselSlides'
+
 const MainCarousel = () => {
 	const [carouselData, setCarouselData] = useState([])
 
@@ -12,39 +13,10 @@ const MainCarousel = () => {
 		const data = await CarouselService.getCarouselData()
 		setCarouselData(data)
 	}
+
 	useEffect(() => {
 		getCarouselData()
 	}, [])
-	//   carousel previous btn
-	const carouselPreviousBtn = ({ previousSlide }) => (
-		<div
-			onClick={previousSlide}
-			className={'carousel-btn'}
-			style={{ marginLeft: '10px' }}
-		>
-			<Image
-				src={'/left-arrow.svg'}
-				alt={'left-arrow'}
-				width={30}
-				height={30}
-			/>
-		</div>
-	)
-
-	const carouselNextBtn = ({ nextSlide }) => (
-		<div
-			onClick={nextSlide}
-			className={'carousel-btn'}
-			style={{ marginRight: '10px' }}
-		>
-			<Image
-				src={'/right-arrow.svg'}
-				alt={'right-arrow'}
-				width={30}
-				height={30}
-			/>
-		</div>
-	)
 
 	return (
 		<Box>
@@ -62,7 +34,7 @@ const MainCarousel = () => {
 					wrapAround={carouselData.length > 1 ? true : false}
 					pauseOnHover={true}
 					renderCenterLeftControls={carouselPreviousBtn}
-					renderCenterRightControls={carouselNextBtn}
+					renderCenterRightControls={CarouselNextBtn}
 				>
 					{carouselData.map(carouselItem => (
 						<Box
