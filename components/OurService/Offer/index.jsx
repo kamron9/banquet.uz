@@ -1,13 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import ExtraService from "./ExtraService";
 import ServiceProductList from "./ServiceProductList";
-import TableAndPlate from "@/components/generic/OurService/TableAndPlate";
+import TableAndPlate from "@/components/OurService/Offer/TableAndPlate";
 
-const OurService = () => {
+const Offer = () => {
   return (
     <Box>
       <TableAndPlate />
-      <Box display={"flex"} gap={"50px"}>
+      <Box display={{ base: "block", lg: "flex" }} gap={"50px"}>
         <ServiceProductList />
         <ExtraService />
       </Box>
@@ -15,4 +15,4 @@ const OurService = () => {
   );
 };
 
-export default OurService;
+export default Offer;

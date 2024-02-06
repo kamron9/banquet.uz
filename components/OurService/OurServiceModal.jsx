@@ -19,7 +19,7 @@ export default function OurServiceModal() {
     <>
       <Modal isOpen={isOpen} onClose={onClose} size={"xl"} isCentered>
         <ModalOverlay />
-        <ModalContent onBlur={onClose}>
+        <ModalContent>
           <ModalHeader>Tariflar</ModalHeader>
           <ModalCloseButton />
           <ModalBody>

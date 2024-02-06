@@ -1,11 +1,11 @@
-import OurService from '@/components/generic/OurService/OurService'
+import Index from "@/components/OurService/Offer";
 
 const AllService = () => {
-	return (
-		<div>
-			<OurService />
-		</div>
-	)
-}
+  return (
+    <div>
+      <Index />
+    </div>
+  );
+};
 
-export default AllService
+export default AllService;
