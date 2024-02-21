@@ -1,5 +1,4 @@
 'use client'
-import ChooseLanguage from '@/components/Header/ChooseLanguage'
 import {
 	Box,
 	Button,
@@ -9,6 +8,7 @@ import {
 	ListItem,
 } from '@chakra-ui/react'
 import Link from 'next/link'
+import LanguageMenu from './LanguageMenu'
 
 const Header = () => {
 	return (
@@ -49,11 +49,11 @@ const Header = () => {
 						</Box>
 					</Box>
 					{/*  buyurtma berish  */}
-					<Box display={'flex'} alignItems={'center'} gap={'10px'}>
+					<Box display={'flex'} alignItems={'center'} gap={'20px'}>
 						<Link href={'/xizmatlar'}>
 							<Button colorScheme={'purple'}>xizmatlar</Button>
 						</Link>
-						<ChooseLanguage />
+						<LanguageMenu />
 					</Box>
 				</Box>
 			</Container>

@@ -1,4 +1,4 @@
-import { useOurServiceModal } from '@/context/OurServiceModalContext'
+import { useOurServiceModal } from '@/context/OurServiceModalProvider'
 import {
 	List,
 	ListItem,

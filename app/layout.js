@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import OurServiceModalProvider from '@/context/OurServiceModalContext'
+import LanguageProvider from '@/context/LanguageProvider'
+import OurServiceModalProvider from '@/context/OurServiceModalProvider'
 import { ChakraProvider } from '@/providers/ChakraProvider'
 import { Container } from '@chakra-ui/react'
 import './globals.css'
@@ -12,16 +13,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang='en'>
+		<html lang='uz'>
 			<body suppressHydrationWarning={true}>
 				<ChakraProvider>
-					<OurServiceModalProvider>
-						<Header />
-						<main className={'main'}>
-							<Container maxW={'1400px'}>{children}</Container>
-						</main>
-						<Footer />
-					</OurServiceModalProvider>
+					<LanguageProvider>
+						<OurServiceModalProvider>
+							<Header />
+							<main className={'main'}>
+								<Container maxW={'1400px'}>{children}</Container>
+							</main>
+							<Footer />
+						</OurServiceModalProvider>
+					</LanguageProvider>
 				</ChakraProvider>
 			</body>
 		</html>

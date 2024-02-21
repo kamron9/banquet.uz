@@ -18,7 +18,7 @@ body {
 .main {
 	padding: 100px 0;
 	min-height: 70vh;
-	background-color: rgba(222, 222, 226, 0.22);
+	background-color: #dedee238;
 }
 /* carousel img style */
 .carousel-img {
