@@ -5,6 +5,8 @@ import {
   Box,
   Checkbox,
   Flex,
+  FormControl,
+  FormLabel,
   Heading,
   List,
   ListItem,
@@ -25,24 +27,28 @@ const ExtraService = () => {
       <List>
         {extraServiceData.map((data) => (
           <ListItem
-            display={"flex"}
             key={data.id}
-            alignItems={"center"}
             gap={"20px"}
-            justifyContent={"space-between"}
             pb={"5px"}
-            borderBottom={"1px solid #d1d1d1"}
-            mb={"20px"}
+            _notLast={{ borderBottom: "1px solid #d1d1d1", mb: "20px" }}
           >
-            <Flex alignItems={"center"} gap={"20px"}>
-              <Checkbox colorScheme={"green"} />
+            <Flex
+              display={"flex"}
+              gap={"20px"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
+            >
+              <FormControl display={"flex"} alignItems={"center"} gap={"20px"}>
+                <Checkbox colorScheme={"green"} />
+                <Box>
+                  <FormLabel>{data.title}</FormLabel>
+                </Box>
+              </FormControl>
+              {/* product price */}
               <Box>
-                <Text as={"b"}>{data.title}</Text>
+                <Text>{data.price.toLocaleString("ru-Ru")} so'm</Text>
               </Box>
             </Flex>
-            <Box display={"flex"} alignItems={"center"}>
-              <Text>{data.price.toLocaleString("ru-Ru")} so'm</Text>
-            </Box>
           </ListItem>
         ))}
       </List>

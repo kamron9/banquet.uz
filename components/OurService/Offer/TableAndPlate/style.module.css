@@ -1,0 +1,4 @@
+.tableCardImg{
+    object-fit: cover;
+    filter: brightness(70%);
+}
