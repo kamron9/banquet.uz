@@ -30,7 +30,7 @@ const MainCarousel = () => {
       ) : (
         <Carousel
           autoplay={true}
-          wrapAround={carouselData.length > 1 ? true : false}
+          wrapAround={carouselData.length > 1}
           pauseOnHover={true}
           renderCenterLeftControls={carouselPreviousBtn}
           renderCenterRightControls={CarouselNextBtn}
@@ -38,6 +38,7 @@ const MainCarousel = () => {
           {carouselData.map((carouselItem) => (
             <Box
               key={carouselItem.id}
+              className={"carousel-inner"}
               width={"100%"}
               height={"100%"}
               position={"relative"}
@@ -52,45 +53,49 @@ const MainCarousel = () => {
               />
               <Box
                 position={"absolute"}
-                top={"50%"}
-                left={{ base: "50%", sm: 0 }}
+                bottom={"80px"}
+                left={{ base: "50%", sm: "80px" }}
                 color={"white"}
                 width={"100%"}
-                transform={{
-                  base: "translate(-50%, -50%)",
-                  sm: "translate(20%, -50%)",
-                  md: "translate(10%, -50%)",
-                }}
+                zIndex={2}
+                // transform={{
+                //   base: "translate(-50%, -50%)",
+                //   sm: "translate(20%, -50%)",
+                //   md: "translate(10%, -50%)",
+                // }}
                 display={"flex"}
                 flexDir={"column"}
                 gap={{ base: "10px", md: "30px" }}
                 alignItems={{ base: "center", sm: "start" }}
               >
                 <Heading
-                  size={{ base: "lg", sm: "xl" }}
+                  fontSize={"54px"}
                   width={"100%"}
                   textAlign={{ base: "center", sm: "start" }}
                   textTransform={"capitalize"}
                 >
                   {carouselItem.title}
                 </Heading>
-                <Text
-                  maxW={{ base: "250px", sm: "310px", md: "500px", lg: "2xl" }}
-                  fontSize={{ base: "16px", sm: "18px", md: "22px" }}
-                  textAlign={{ base: "center", sm: "start" }}
-                  className="carousel-text"
-                >
-                  {carouselItem.description}
-                </Text>
-                <Button
-                  mt={{ base: "30px", md: "0" }}
-                  size={"lg"}
-                  textColor={"white"}
-                  variant={"outline"}
-                  _hover={{ bg: "transparent" }}
-                >
-                  ko'rish
-                </Button>
+                <Box display={"flex"} alignItems={"center"} gap={"30px"}>
+                  <Text
+                    color={"white"}
+                    maxW={"450px"}
+                    fontSize={"20px"}
+                    lineHeight={"29.83px"}
+                    className="carousel-text"
+                  >
+                    {carouselItem.description}
+                  </Text>
+                  <Button
+                    mt={{ base: "30px", md: "0" }}
+                    size={"lg"}
+                    textColor={"white"}
+                    variant={"outline"}
+                    _hover={{ bg: "transparent" }}
+                  >
+                    ko'rish
+                  </Button>
+                </Box>
               </Box>
             </Box>
           ))}

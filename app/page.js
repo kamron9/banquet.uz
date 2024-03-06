@@ -4,7 +4,6 @@ import PhotoGallery from "@/components/PhotoGallery";
 import Statistic from "@/components/Statistic";
 
 export default function Home() {
-  console.log("render");
   return (
     <div>
       <MainCarousel />
