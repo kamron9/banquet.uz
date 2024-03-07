@@ -48,7 +48,7 @@ body {
 	aspect-ratio: 16/9;
 	object-fit: cover;
 	object-position: center;
-	border-radius: 10px;
+	border-radius: 12px;
 	/*filter: brightness(80%);*/
 	user-select: none;
 }
@@ -80,6 +80,7 @@ body {
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	padding: 0;
 }
 
 /*  service design */

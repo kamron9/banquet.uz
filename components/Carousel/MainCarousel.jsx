@@ -1,25 +1,29 @@
 "use client";
 import CarouselService from "@/service/client/CarouselService";
-import { Box, Button, Heading, Skeleton, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Image as ChakraImage,
+  Heading,
+  Skeleton,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
 import { memo, useEffect, useState } from "react";
 import { CarouselNextBtn, carouselPreviousBtn } from "./CarouselSlides";
+import RightArrow from "../../public/assets/icons/right-arrow-circle.svg";
+import Link from "next/link";
 
 const MainCarousel = () => {
   const [carouselData, setCarouselData] = useState([]);
-  const getCarouselData = async () => {
-    const data = await CarouselService.getCarouselData();
-    setCarouselData(data);
-  };
 
   useEffect(() => {
-    getCarouselData();
+    CarouselService.getCarouselData().then((res) => setCarouselData(res));
   }, []);
 
   return (
     <Box>
-      {!carouselData.length ? (
+      {!carouselData?.length ? (
         <Skeleton
           className="carousel-skeleton"
           w={"100%"}
@@ -29,7 +33,7 @@ const MainCarousel = () => {
         ></Skeleton>
       ) : (
         <Carousel
-          autoplay={true}
+          // autoplay={true}
           wrapAround={carouselData.length > 1}
           pauseOnHover={true}
           renderCenterLeftControls={carouselPreviousBtn}
@@ -42,6 +46,8 @@ const MainCarousel = () => {
               width={"100%"}
               height={"100%"}
               position={"relative"}
+              borderRadius={"12px"}
+              overflow={"hidden"}
             >
               <Image
                 src={carouselItem.image}
@@ -54,47 +60,51 @@ const MainCarousel = () => {
               <Box
                 position={"absolute"}
                 bottom={"80px"}
-                left={{ base: "50%", sm: "80px" }}
+                left={{ base: "20px", md: "80px" }}
                 color={"white"}
-                width={"100%"}
+                width={{ base: "auto", md: "100%" }}
                 zIndex={2}
-                // transform={{
-                //   base: "translate(-50%, -50%)",
-                //   sm: "translate(20%, -50%)",
-                //   md: "translate(10%, -50%)",
-                // }}
                 display={"flex"}
-                flexDir={"column"}
-                gap={{ base: "10px", md: "30px" }}
-                alignItems={{ base: "center", sm: "start" }}
+                flexDir={{ base: "row", sm: "column" }}
+                alignItems={{ base: "center", sm: "flex-start" }}
+                gap={"20px"}
               >
                 <Heading
-                  fontSize={"54px"}
+                  fontSize={{ base: "24px", sm: "28px", md: "3rem" }}
                   width={"100%"}
-                  textAlign={{ base: "center", sm: "start" }}
                   textTransform={"capitalize"}
                 >
                   {carouselItem.title}
                 </Heading>
-                <Box display={"flex"} alignItems={"center"} gap={"30px"}>
+                <Box
+                  display={"flex"}
+                  alignItems={"center"}
+                  gap={"20px"}
+                  paddingRight={"10px"}
+                >
                   <Text
                     color={"white"}
                     maxW={"450px"}
-                    fontSize={"20px"}
+                    fontSize={{ base: "16px", md: "20px" }}
                     lineHeight={"29.83px"}
-                    className="carousel-text"
+                    className={"carousel-text"}
+                    display={{ base: "none", sm: "block" }}
                   >
                     {carouselItem.description}
                   </Text>
-                  <Button
-                    mt={{ base: "30px", md: "0" }}
-                    size={"lg"}
-                    textColor={"white"}
-                    variant={"outline"}
-                    _hover={{ bg: "transparent" }}
-                  >
-                    ko'rish
-                  </Button>
+                  {/* circle arrow img */}
+                  <Box>
+                    <Link href={"/"}>
+                      <ChakraImage
+                        as={Image}
+                        src={RightArrow}
+                        alt={"right arrow"}
+                        width={{ base: "40px", sm: "60px" }}
+                        height={{ base: "40px", sm: "60px" }}
+                        minW={{ base: "40px", sm: "60px" }}
+                      />
+                    </Link>
+                  </Box>
                 </Box>
               </Box>
             </Box>
