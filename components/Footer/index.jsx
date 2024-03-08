@@ -2,7 +2,6 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import FooterForm from "./FooterForm";
 const Footer = () => {
   return (
     <Box as={"footer"} id={"footer"} bg={"rgb(244 245 247)"} padding={"40px 0"}>
@@ -64,7 +63,6 @@ const Footer = () => {
             <Link href={"/"}>contact</Link>
           </Box>
           {/*  form  */}
-          <FooterForm />
         </Box>
         <hr style={{ margin: "20px 0" }} />
         <Box

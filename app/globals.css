@@ -4,7 +4,9 @@
 	font-weight: 400;
 	font-style: normal;
 }
-
+:root{
+	--secondary-color:#F9F8F6;
+}
 
 
 
@@ -29,7 +31,7 @@ body {
 .main {
 	padding: 100px 0;
 	min-height: 70vh;
-	background-color: #dedee238;
+	/*background-color: #dedee238;*/
 }
 .carousel-inner::after{
 	content: '';

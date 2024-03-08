@@ -1,13 +1,15 @@
-import AboutCard from '@/components/AboutCompany/AboutCard'
-import { Box, Heading } from '@chakra-ui/react'
+import AboutCard from "@/components/AboutCompany/AboutCard";
+import { Box, Heading } from "@chakra-ui/react";
 
 const AboutCompany = () => {
-	return (
-		<Box as='section' id={'about'} mt={'50px'}>
-			<Heading size={'lg'}>Biz Haqimizda</Heading>
-			<AboutCard />
-		</Box>
-	)
-}
+  return (
+    <Box as="section" id={"about"} my={"80px"}>
+      <Heading size={"lg"} mb={"30px"}>
+        Biz Haqimizda
+      </Heading>
+      <AboutCard />
+    </Box>
+  );
+};
 
-export default AboutCompany
+export default AboutCompany;
