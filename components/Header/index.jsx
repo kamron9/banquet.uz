@@ -8,9 +8,11 @@ import {
 	ListItem,
 } from '@chakra-ui/react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import LanguageMenu from './LanguageMenu'
-
 const Header = () => {
+	const pathname = usePathname()
+	console.log(pathname)
 	return (
 		<header className={'header'}>
 			<Container maxW={'1400px'}>
@@ -24,11 +26,17 @@ const Header = () => {
 					{/*  header logo & navigations  */}
 					<Box display={'flex'} alignItems={'center'} gap={'20px'}>
 						{/* logo */}
-						<Link href={'/'}>
+						{pathname !== '/' ? (
+							<Link href={'/'}>
+								<Heading size={'lg'} mr={'70px'}>
+									logo
+								</Heading>
+							</Link>
+						) : (
 							<Heading size={'lg'} mr={'70px'}>
 								logo
 							</Heading>
-						</Link>
+						)}
 
 						{/* navigations */}
 						<Box as={'nav'} display={{ base: 'none', md: 'block' }}>
@@ -43,7 +51,7 @@ const Header = () => {
 									<Link href={'/#gallery'}>galeraya</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'#footer'}>bog'lanish</Link>
+									<Link href={'#contact'}>bog'lanish</Link>
 								</ListItem>
 							</List>
 						</Box>
