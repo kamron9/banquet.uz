@@ -51,7 +51,7 @@ const Header = () => {
 									<Link href={'/#gallery'}>galeraya</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'#contact'}>bog'lanish</Link>
+									<Link href={'/#contact'}>bog'lanish</Link>
 								</ListItem>
 							</List>
 						</Box>
