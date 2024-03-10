@@ -1,6 +1,32 @@
 {
-  "Index": {
-    "title": "dabro pajalovat!",
-    "description": "eto index stranica"
-  }
+	"IndexPage": {
+		"Header": {
+			"bizHaqimizda": "О нас",
+			"Statistika": "Статистика",
+			"Galereya": "Галерея",
+			"Aloqa": "Связаться с нами",
+			"Xizmatlar": "Услуги"
+		},
+		"bizHaqimizda": "О нас",
+		"Statistika": "Статистика",
+		"TadbirdanLavhalar": "Фотографии с мероприятия",
+
+		"Aloqa": {
+			"Sarlavha": "Связаться с нами",
+			"FormSarlavha": "оставить контактную информацию",
+			"IsmFamiliya": "Ваше имя",
+			"Telfon": "ваш номер телефона",
+			"FormMsg": {
+				"error": {
+					"ism-kiriting": "Пожалуйста, введите Ваше имя",
+					"telfon-kiriting": "номер телефона не должен быть меньше 9 цифр"
+				},
+				"success": "Спасибо за запрос, наш оператор свяжется с вами в течение 24 часов"
+			}
+		},
+		"Footer": {
+			"IjtimoiyTarmoq": "Наши социальные сети",
+			"Xarita": "карта"
+		}
+	}
 }

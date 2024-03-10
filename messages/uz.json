@@ -1,6 +1,32 @@
 {
-  "Index": {
-    "title": "hush kelibsiz Indega",
-    "description": "bu index sahifasi"
-  }
+	"IndexPage": {
+		"Header": {
+			"bizHaqimizda": "Biz Haqimizda",
+			"Statistika": "Statistika",
+			"Galereya": "Galereya",
+			"Aloqa": "Bog'lanish",
+			"Xizmatlar": "Xizmatlar"
+		},
+		"bizHaqimizda": "Biz Haqimizda",
+		"Statistika": "Statistika",
+		"TadbirdanLavhalar": "Tadbirdan lavhalar",
+
+		"Aloqa": {
+			"Sarlavha": "Bog'lanish",
+			"FormSarlavha": "Ariza qoldirish uchun",
+			"IsmFamiliya": "Ism Familiyangizni kiriting",
+			"Telfon": "Telefon raqamingizni kiriting",
+			"FormMsg": {
+				"error": {
+					"ism-kiriting": "Iltimos ismingizni kiriting",
+					"telfon-kiriting": "telefon raqam 9 tadan kam  bo'masligi kerak"
+				},
+				"success": "so'rovingiz uchun raxmat 24 soat ichida operatorimiz siz bilan bog'lanadi"
+			}
+		},
+		"Footer": {
+			"IjtimoiyTarmoq": "Ijtimoiy tarmoqlarimiz",
+			"Xarita": "Xarita"
+		}
+	}
 }

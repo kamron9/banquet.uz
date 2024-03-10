@@ -1,18 +1,34 @@
 import ContactForm from '@/components/Contact/ContactForm'
 import { Box, Image as ChakraImage, Flex, Heading } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import callCenter from '../../public/assets/images/callcenter.jpeg'
+import callCenter from '../../../public/assets/images/callcenter.jpeg'
+
 const Contact = () => {
+	const t = useTranslations('IndexPage.Aloqa')
 	const imgStyle = {
 		height: '400px',
 		objectFit: 'cover',
 		objectPosition: 'center',
 	}
 
+	const translations = {
+		FormSarlavha: t('FormSarlavha'),
+		ismFamiliya: t('IsmFamiliya'),
+		Telfon: t('Telfon'),
+		formMsg: {
+			error: {
+				ism: t('FormMsg.error.ism-kiriting'),
+				tel: t('FormMsg.error.telfon-kiriting'),
+			},
+			success: t('FormMsg.success'),
+		},
+	}
+
 	return (
 		<Box as={'section'} mb={'30px'} id='contact'>
 			<Heading size={'lg'} mb={'30px'} id='contact'>
-				Bog'lanish
+				{t('Sarlavha')}
 			</Heading>
 			<Flex flexDirection={{ base: 'column', md: 'row' }}>
 				<ChakraImage
@@ -23,7 +39,7 @@ const Contact = () => {
 					style={imgStyle}
 				/>
 				<Box width={{ base: '100%', md: '50%' }}>
-					<ContactForm />
+					<ContactForm translations={translations} />
 				</Box>
 			</Flex>
 		</Box>

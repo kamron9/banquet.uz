@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 
-const ContactForm = () => {
+const ContactForm = ({ translations }) => {
 	const toast = useToast()
 	const [numberInputValue, setNumberInputValue] = useState('')
 	const [nameInputValue, setNameInputValue] = useState('')
@@ -22,12 +22,12 @@ const ContactForm = () => {
 
 		if (nameInputValue.length < 1) {
 			toast({
-				title: 'iltimos ismingizni kiriting',
+				title: translations.formMsg.error.ism,
 				status: 'error',
 			})
 		} else if (numberInputValue.length < 9) {
 			toast({
-				title: "telefon raqam 9 dan kam  bo'masligi kerak",
+				title: translations.formMsg.error.tel,
 				status: 'error',
 			})
 		} else {
@@ -36,8 +36,7 @@ const ContactForm = () => {
 				phone: numberInputValue,
 			})
 			toast({
-				title:
-					"so'rovingiz uchun raxmat 24 soat ichida operatorimiz siz bilan bog'lanadi",
+				title: translations.formMsg.success,
 				status: 'success',
 			})
 			setNameInputValue('')
@@ -58,7 +57,7 @@ const ContactForm = () => {
 			gap={'30px'}
 		>
 			<Text as={'span'} fontSize={{ base: '20px', md: '28px' }}>
-				Ariza qoldirish uchun.
+				{translations.FormSarlavha}
 			</Text>
 			<Box
 				as='form'
@@ -71,7 +70,7 @@ const ContactForm = () => {
 					onChange={e => setNameInputValue(e.target.value)}
 					value={nameInputValue}
 					name='full_name'
-					placeholder={'Ism Familiyangizni kiriting'}
+					placeholder={translations.ismFamiliya}
 					bg={'white'}
 				/>
 				<InputGroup>
@@ -82,7 +81,7 @@ const ContactForm = () => {
 						name='phone'
 						value={numberInputValue}
 						inputMode='numeric'
-						placeholder={'Telefon raqamingizni kiriting'}
+						placeholder={translations.Telfon}
 						maxLength={9}
 						bg={'white'}
 					/>

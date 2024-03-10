@@ -1,4 +1,3 @@
-'use client'
 import {
 	Box,
 	Button,
@@ -7,12 +6,13 @@ import {
 	List,
 	ListItem,
 } from '@chakra-ui/react'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import LanguageMenu from './LanguageMenu'
+
 const Header = () => {
-	const pathname = usePathname()
-	console.log(pathname)
+	const t = useTranslations('IndexPage.Header')
+	const locale = useLocale()
 	return (
 		<header className={'header'}>
 			<Container maxW={'1400px'}>
@@ -26,40 +26,35 @@ const Header = () => {
 					{/*  header logo & navigations  */}
 					<Box display={'flex'} alignItems={'center'} gap={'20px'}>
 						{/* logo */}
-						{pathname !== '/' ? (
-							<Link href={'/'}>
-								<Heading size={'lg'} mr={'70px'}>
-									logo
-								</Heading>
-							</Link>
-						) : (
-							<Heading size={'lg'} mr={'70px'}>
-								logo
+
+						<Link href={'/'}>
+							<Heading size={'lg'} mr={'50px'}>
+								Logo
 							</Heading>
-						)}
+						</Link>
 
 						{/* navigations */}
 						<Box as={'nav'} display={{ base: 'none', md: 'block' }}>
 							<List display={'flex'} alignItems={'center'} gap={'20px'}>
 								<ListItem>
-									<Link href={'/#about'}>biz haqimizda</Link>
+									<Link href={'/#about'}>{t('bizHaqimizda')}</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#statistic'}>statistika</Link>
+									<Link href={'/#statistic'}>{t('Statistika')}</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#gallery'}>galeraya</Link>
+									<Link href={'/#gallery'}>{t('Galereya')}</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#contact'}>bog'lanish</Link>
+									<Link href={'/#contact'}>{t('Aloqa')}</Link>
 								</ListItem>
 							</List>
 						</Box>
 					</Box>
 					{/*  buyurtma berish  */}
 					<Box display={'flex'} alignItems={'center'} gap={'20px'}>
-						<Link href={'/xizmatlar'}>
-							<Button colorScheme={'purple'}>xizmatlar</Button>
+						<Link href={`/${locale}/xizmatlar`}>
+							<Button colorScheme={'purple'}>{t('Xizmatlar')}</Button>
 						</Link>
 						<LanguageMenu />
 					</Box>

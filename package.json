@@ -1,24 +1,24 @@
 {
-  "name": "toshkent-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@chakra-ui/next-js": "^2.2.0",
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "axios": "^1.6.5",
-    "framer-motion": "^10.18.0",
-    "next": "14.0.4",
-    "nuka-carousel": "^7.0.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-query": "^3.39.3"
-  }
+	"name": "toshkent-project",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@chakra-ui/next-js": "^2.2.0",
+		"@chakra-ui/react": "^2.8.2",
+		"@emotion/react": "^11.11.3",
+		"@emotion/styled": "^11.11.0",
+		"axios": "^1.6.5",
+		"framer-motion": "^10.18.0",
+		"next": "14.0.4",
+		"next-intl": "^3.9.4",
+		"nuka-carousel": "^7.0.0",
+		"react": "^18",
+		"react-dom": "^18"
+	}
 }
