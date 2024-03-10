@@ -88,7 +88,7 @@ const ContactForm = ({ translations }) => {
 				</InputGroup>
 				<Box textAlign={'end'}>
 					<Button colorScheme={'purple'} type='submit' width={'fit-content'}>
-						Yuborish
+						{translations.yuborishBtn}
 					</Button>
 				</Box>
 			</Box>

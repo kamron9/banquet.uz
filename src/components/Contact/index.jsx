@@ -16,6 +16,7 @@ const Contact = () => {
 		FormSarlavha: t('FormSarlavha'),
 		ismFamiliya: t('IsmFamiliya'),
 		Telfon: t('Telfon'),
+		yuborishBtn: t('yuborishBtn'),
 		formMsg: {
 			error: {
 				ism: t('FormMsg.error.ism-kiriting'),

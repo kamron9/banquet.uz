@@ -16,6 +16,7 @@
 			"FormSarlavha": "оставить контактную информацию",
 			"IsmFamiliya": "Ваше имя",
 			"Telfon": "ваш номер телефона",
+			"yuborishBtn": "Отправить",
 			"FormMsg": {
 				"error": {
 					"ism-kiriting": "Пожалуйста, введите Ваше имя",
