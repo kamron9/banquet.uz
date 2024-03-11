@@ -7,7 +7,8 @@ import {
 	ListItem,
 } from '@chakra-ui/react'
 import { useLocale, useTranslations } from 'next-intl'
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link } from '@/config/navigations'
 import LanguageMenu from './LanguageMenu'
 
 const Header = () => {
@@ -53,7 +54,7 @@ const Header = () => {
 					</Box>
 					{/*  buyurtma berish  */}
 					<Box display={'flex'} alignItems={'center'} gap={'20px'}>
-						<Link href={`/${locale}/xizmatlar`}>
+						<Link href={`/xizmatlar`}>
 							<Button colorScheme={'purple'}>{t('Xizmatlar')}</Button>
 						</Link>
 						<LanguageMenu />

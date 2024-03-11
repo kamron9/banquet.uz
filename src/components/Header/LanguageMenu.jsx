@@ -1,26 +1,33 @@
-'use client'
-import { Select } from '@chakra-ui/react'
-import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
-import { memo } from 'react'
+"use client";
+import { Select } from "@chakra-ui/react";
+import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
+import { useTransition } from "react";
+import { usePathname, useRouter } from "@/config/navigations";
 
 const LanguageMenu = () => {
-	const locale = useLocale()
-	const router = useRouter()
-	// const pahtname = usePathname()
-	// const params = useParams()
-	// const search = useSearchParams()
+  const locale = useLocale();
+  const params = useParams();
 
-	const changeLocale = e => {
-		router.replace(`/${e.target.value}`)
-	}
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, setTranslation] = useTransition();
 
-	return (
-		<Select defaultValue={locale} onChange={changeLocale}>
-			<option value='uz'>uz</option>
-			<option value='ru'>ru</option>
-		</Select>
-	)
-}
+  const changeLocale = (e) => {
+    const nextLocale = e.target.value;
+    setTranslation(() => {
+      router.replace({ pathname, params }, { locale: nextLocale });
+    });
+  };
 
-export default memo(LanguageMenu)
+  return (
+    <div>
+      <Select defaultValue={locale} onChange={changeLocale}>
+        <option value="uz">uz</option>
+        <option value="ru">ru</option>
+      </Select>
+    </div>
+  );
+};
+
+export default LanguageMenu;
