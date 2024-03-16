@@ -1,5 +1,5 @@
 "use client";
-import { Select } from "@chakra-ui/react";
+import { Box, Select } from "@chakra-ui/react";
 import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
 import { useTransition } from "react";
@@ -21,12 +21,12 @@ const LanguageMenu = () => {
   };
 
   return (
-    <div>
+    <Box maxW={"120px"}>
       <Select defaultValue={locale} onChange={changeLocale}>
         <option value="uz">uz</option>
         <option value="ru">ru</option>
       </Select>
-    </div>
+    </Box>
   );
 };
 

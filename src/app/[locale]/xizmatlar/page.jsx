@@ -1,4 +1,3 @@
-"use client";
 import OurService from "@/components/OurService/OurService";
 
 const XizmatlarPage = () => {
