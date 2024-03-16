@@ -15,19 +15,20 @@ function OrderModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>buyurtma berish</Button>
+      <Button onClick={onOpen} colorScheme={"purple"} variant={"outline"}>
+        buyurtma berish
+      </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Buyurtma</ModalHeader>
           <ModalCloseButton />
           <ModalBody>test</ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
+            <Button colorScheme="purple" mr={3} onClick={onClose}>
+              yuborish
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
