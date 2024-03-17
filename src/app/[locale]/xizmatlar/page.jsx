@@ -1,4 +1,4 @@
-import OurService from "@/components/OurService/OurService";
+import OurService from "@/components/OurService";
 
 const XizmatlarPage = () => {
   return (

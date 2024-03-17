@@ -1,7 +1,7 @@
 import { Card, CardBody, CardFooter, CardHeader, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 
-const ProductList = ({ product }) => {
+const MenuList = ({ product }) => {
 	return (
 		product && (
 			<Card key={product.id} spacing={3} padding={'15px'}>
@@ -33,4 +33,4 @@ const ProductList = ({ product }) => {
 	)
 }
 
-export default ProductList
+export default MenuList
