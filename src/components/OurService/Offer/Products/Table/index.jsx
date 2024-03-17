@@ -52,7 +52,12 @@ const Table = () => {
 					alignItems={'start'}
 				>
 					{/* table img */}
-					<Box width={'100%'} maxW={{ base: '100%', md: '450px' }} height={350}>
+					<Box
+						width={'100%'}
+						maxW={{ base: '100%', md: '450px' }}
+						mb={{ base: '30px', md: '0' }}
+						height={350}
+					>
 						<Image
 							src={activeTab?.img}
 							width={300}

@@ -83,7 +83,10 @@ const Menu = () => {
 							<SimpleGrid
 								spacing={4}
 								width={'100%'}
-								templateColumns='repeat(auto-fill, minmax(200px, 1fr))'
+								templateColumns={{
+									base: 'repeat(2, 1fr)',
+									sm: 'repeat(auto-fill, minmax(200px, 1fr))',
+								}}
 							>
 								{products ? (
 									products.map(product => (
