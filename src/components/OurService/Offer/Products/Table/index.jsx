@@ -24,7 +24,7 @@ const Table = () => {
 	// set activetable and variant to selectedTable context
 	useEffect(() => {
 		setSelectedTable({ variant: activeVariant, ...activeTab })
-	}, [activeTab])
+	}, [activeTab, activeVariant])
 
 	// changing active tab
 	const changeActiveTab = id => {

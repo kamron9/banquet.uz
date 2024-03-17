@@ -18,8 +18,6 @@ import {
 function OrderModal() {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const { selectedProduct, selectedTable } = useCalculateTotalContext()
-	console.log(selectedProduct, 'product')
-	console.log(selectedTable, 'table')
 	return (
 		<>
 			<Button onClick={onOpen} colorScheme={'purple'} variant={'outline'}>
