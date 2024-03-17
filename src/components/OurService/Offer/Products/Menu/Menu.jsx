@@ -1,4 +1,5 @@
 'use client'
+import { useCalculateTotalContext } from '@/context/CalculateTotalProvider'
 import { oddiyData } from '@/data/oddiyData'
 import {
 	Box,
@@ -11,19 +12,20 @@ import {
 	Tabs,
 	Text,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProductList from './MenuList'
 
 const Menu = () => {
-	const [selectedProduct, setSelectedProduct] = useState('menu-1')
-
+	const [selectedTab, setSelectedTab] = useState(oddiyData[0])
+	const { setSelectedProduct } = useCalculateTotalContext()
 	// handle tab index
 	const handleTabIndex = index => {
-		setSelectedProduct(oddiyData[index])
+		setSelectedTab(oddiyData[index])
 	}
-
-	console.log(selectedProduct)
-
+	// set selected product to context
+	useEffect(() => {
+		setSelectedProduct(selectedTab)
+	}, [selectedTab])
 	return (
 		<Box mb='50px'>
 			<Heading

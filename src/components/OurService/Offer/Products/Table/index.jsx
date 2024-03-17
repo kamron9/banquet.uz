@@ -1,4 +1,5 @@
 'use client'
+import { useCalculateTotalContext } from '@/context/CalculateTotalProvider'
 import RentService from '@/service/server/RentService'
 import { Box, Flex, Heading, Skeleton, Text } from '@chakra-ui/react'
 import Image from 'next/image'
@@ -8,15 +9,22 @@ const Table = () => {
 	const [tableData, setTableData] = useState([])
 	const [activeTab, setActiveTab] = useState([])
 	const [activeVariant, setActiveVariant] = useState('torburchak')
+	const { setSelectedTable } = useCalculateTotalContext()
 	// get table data from server
 	const getTableData = async () => {
 		const data = await RentService.Table()
 		setTableData(data)
 		setActiveTab(data[0])
 	}
+
 	useEffect(() => {
 		getTableData()
 	}, [])
+
+	// set activetable and variant to selectedTable context
+	useEffect(() => {
+		setSelectedTable({ variant: activeVariant, ...activeTab })
+	}, [activeTab])
 
 	// changing active tab
 	const changeActiveTab = id => {

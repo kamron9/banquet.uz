@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header'
+import CalculateTotalProvider from '@/context/CalculateTotalProvider'
 import OurServiceModalProvider from '@/context/OurServiceModalProvider'
 import { ChakraProvider } from '@/providers/ChakraProvider'
 import { Container } from '@chakra-ui/react'
@@ -17,11 +18,13 @@ export default function RootLayout({ children, params: { locale } }) {
 			<body suppressHydrationWarning={true}>
 				<ChakraProvider>
 					<OurServiceModalProvider>
-						<Header />
-						<main className={'main'}>
-							<Container maxW={'1400px'}>{children}</Container>
-						</main>
-						<Footer />
+						<CalculateTotalProvider>
+							<Header />
+							<main className={'main'}>
+								<Container maxW={'1400px'}>{children}</Container>
+							</main>
+							<Footer />
+						</CalculateTotalProvider>
 					</OurServiceModalProvider>
 				</ChakraProvider>
 			</body>
