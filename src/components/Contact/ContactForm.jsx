@@ -1,5 +1,5 @@
 'use client'
-import postForm from '@/service/client/FooterFormService'
+import postForm from '@/service/client/ContactFormService'
 import {
 	Box,
 	Button,

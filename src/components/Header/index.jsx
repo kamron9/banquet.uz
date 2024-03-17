@@ -6,14 +6,14 @@ import {
 	List,
 	ListItem,
 } from '@chakra-ui/react'
-import { useLocale, useTranslations } from 'next-intl'
-// import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+
 import { Link } from '@/config/navigations'
 import LanguageMenu from './LanguageMenu'
 
 const Header = () => {
 	const t = useTranslations('IndexPage.Header')
-	const locale = useLocale()
+
 	return (
 		<header className={'header'}>
 			<Container maxW={'1400px'}>

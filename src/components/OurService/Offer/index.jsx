@@ -1,20 +1,30 @@
-import TableAndPlate from "@/components/OurService/Offer/TableAndPlate/index";
-import { Box, Button } from "@chakra-ui/react";
-import ExtraService from "./ExtraService";
-import Products from "./Products/Products";
-import OrderModal from "@/components/modal/OrderModal";
+import TableAndPlate from '@/components/OurService/Offer/TableAndPlate/index'
+import OrderModal from '@/components/modal/OrderModal'
+import { Box, Heading } from '@chakra-ui/react'
+import ExtraService from './ExtraService'
+import Products from './Products/Products'
 
 const Offer = () => {
-  return (
-    <Box>
-      <TableAndPlate />
-      <Box display={{ base: "block", lg: "flex" }} gap={"50px"}>
-        <Products />
-        <ExtraService />
-      </Box>
-      <OrderModal />
-    </Box>
-  );
-};
+	return (
+		<Box>
+			<Box display={'flex'} mb={'60px'}>
+				<TableAndPlate />
+				<ExtraService />
+			</Box>
+			<Heading
+				color={'purple'}
+				size={'lg'}
+				textAlign={'center'}
+				width={'100%'}
+				mb={'30px'}
+			>
+				Bizning Menyu
+			</Heading>
+			<Products />
 
-export default Offer;
+			<OrderModal />
+		</Box>
+	)
+}
+
+export default Offer

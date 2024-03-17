@@ -104,6 +104,10 @@ body {
 .our-service-list__item:hover .service-img {
 	scale: 1.2;
 }
+
+
+
+
 /* remove type number input right side arrows */
 input[type='number']::-webkit-inner-spin-button {
 	display: none;

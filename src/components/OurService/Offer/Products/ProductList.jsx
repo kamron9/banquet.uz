@@ -1,40 +1,34 @@
-import { Box, Divider, Flex, List, ListItem, Text } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, CardHeader, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 
 const ProductList = ({ product }) => {
 	return (
 		product && (
-			<List key={product.id} spacing={3}>
-				<ListItem display={'flex'} alignItems={'center'}>
-					<Flex alignItems={'center'} gap={'10px'}>
-						<Image
-							src={product.imgLink}
-							alt={product.title}
-							width={50}
-							height={50}
-							style={{
-								borderRadius: '50%',
-								width: 50,
-								height: 50,
-								objectFit: 'cover',
-							}}
-						/>
-					</Flex>
-					<Box
-						pl={'20px'}
-						width={'90%'}
-						display={'flex'}
-						alignItems={{ base: 'start', sm: 'center' }}
-						flexDirection={{ base: 'column', sm: 'row' }}
-						justifyContent={'space-between'}
-					>
-						<Text as='b'>{product.title}</Text>
-
-						<Text>{product.price.toLocaleString('ru-Ru')} so'm</Text>
-					</Box>
-				</ListItem>
-				<Divider my={'10px'} />
-			</List>
+			<Card key={product.id} spacing={3} padding={'15px'}>
+				<CardHeader p={0}>
+					<Image
+						src={product.imgLink}
+						alt={product.title}
+						width={50}
+						height={50}
+						style={{
+							borderRadius: '5px',
+							width: '100%',
+							height: 150,
+							objectFit: 'cover',
+							objectPosition: 'center',
+						}}
+					/>
+				</CardHeader>
+				<CardBody p={'20px 0'}>
+					<Text as='b'>{product.title}</Text>
+				</CardBody>
+				<CardFooter p={0}>
+					<Text as={'span'} color={'purple'}>
+						{product.price.toLocaleString('ru-Ru')} so'm
+					</Text>
+				</CardFooter>
+			</Card>
 		)
 	)
 }
