@@ -3,7 +3,6 @@ import {
 	Box,
 	Button,
 	FormControl,
-	FormLabel,
 	Input,
 	InputGroup,
 	InputLeftAddon,
@@ -16,18 +15,22 @@ const OrderForm = () => {
 	return (
 		<Box display={'flex'} flexDirection={'column'} gap={'10px'}>
 			<FormControl>
-				<FormLabel color={'#828282'}>ismingizni kiriting:</FormLabel>
-				<Input height={'50px'} type='text' maxLength={'20'} />
+				<Input
+					height={'45px'}
+					type='text'
+					maxLength={'20'}
+					placeholder='Isminginzni kiriting'
+				/>
 			</FormControl>
 			<FormControl>
-				<FormLabel color={'#828282'}>Telefon raqamingiz:</FormLabel>
-				<InputGroup height={'50px'}>
+				<InputGroup height={'45px'}>
 					<InputLeftAddon height={'100%'}>+998</InputLeftAddon>
 					<Input
 						type='tel'
 						height={'100%'}
 						value={phoneNumber.replace(/\D/g, '')}
 						maxLength='9'
+						placeholder='Telefon raqamingiz'
 						onChange={e => setPhoneNumber(e.target.value)}
 					/>
 				</InputGroup>

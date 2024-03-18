@@ -65,16 +65,17 @@ const ContactForm = ({ translations }) => {
 				display={'flex'}
 				flexDirection={'column'}
 				gap={'7px'}
+				maxW={'400px'}
 			>
 				<Input
 					onChange={e => setNameInputValue(e.target.value)}
 					value={nameInputValue}
 					name='full_name'
-					height={'50px'}
+					height={'45px'}
 					placeholder={translations.ismFamiliya}
 					bg={'white'}
 				/>
-				<InputGroup height={'50px'}>
+				<InputGroup height={'45px'}>
 					<InputLeftAddon height={'100%'}>+998</InputLeftAddon>
 					<Input
 						onChange={e => setNumberInputValue(e.target.value)}
