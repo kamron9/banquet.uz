@@ -7,6 +7,7 @@ import {
 	Divider,
 	Flex,
 	FormControl,
+	FormLabel,
 	Input,
 	Modal,
 	ModalBody,
@@ -23,6 +24,8 @@ import {
 	Text,
 	useDisclosure,
 } from '@chakra-ui/react'
+import { useState } from 'react'
+import OrderForm from '../Form/OrderForm'
 
 function OrderModal() {
 	const { isOpen, onOpen, onClose } = useDisclosure()
@@ -64,7 +67,7 @@ function OrderModal() {
 					</ModalBody>
 					<ModalFooter>
 						<Box width={'100%'}>
-							<ModalForm />
+							<OrderForm />
 						</Box>
 					</ModalFooter>
 				</ModalContent>
@@ -74,6 +77,7 @@ function OrderModal() {
 }
 export default OrderModal
 
+// including total price and amount of people
 const TotalPricing = ({ selectedProduct, selectedTable }) => {
 	return (
 		<Box>
@@ -105,17 +109,7 @@ const TotalPricing = ({ selectedProduct, selectedTable }) => {
 	)
 }
 
-const ModalForm = () => {
-	return (
-		<FormControl display={'flex'} flexDirection={'column'} gap={'10px'}>
-			<Input type='text' placeholder='Ismingiz?' />
-			<Input type='tel' placeholder='Telefon raqamingiz?' />
-			<Box textAlign={'center'}>
-				<Button colorScheme={'purple'}>Yuborish</Button>
-			</Box>
-		</FormControl>
-	)
-}
+
 
 const FlexContent = ({ text, selectedItem }) => {
 	return (

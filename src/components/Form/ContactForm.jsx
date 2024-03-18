@@ -70,16 +70,18 @@ const ContactForm = ({ translations }) => {
 					onChange={e => setNameInputValue(e.target.value)}
 					value={nameInputValue}
 					name='full_name'
+					height={'50px'}
 					placeholder={translations.ismFamiliya}
 					bg={'white'}
 				/>
-				<InputGroup>
-					<InputLeftAddon>+998</InputLeftAddon>
+				<InputGroup height={'50px'}>
+					<InputLeftAddon height={'100%'}>+998</InputLeftAddon>
 					<Input
 						onChange={e => setNumberInputValue(e.target.value)}
 						type='tel'
 						name='phone'
-						value={numberInputValue}
+						height={'100%'}
+						value={numberInputValue.replace(/\D/g, '')}
 						inputMode='numeric'
 						placeholder={translations.Telfon}
 						maxLength={9}

@@ -1,4 +1,4 @@
-import ContactForm from '@/components/Contact/ContactForm'
+import ContactForm from '@/components/Form/ContactForm'
 import { Box, Image as ChakraImage, Flex, Heading } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
