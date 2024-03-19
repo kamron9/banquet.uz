@@ -23,6 +23,21 @@ const MainCarousel = () => {
 		CarouselService.getCarouselData().then(res => setCarouselData(res))
 	}, [])
 
+	// generate carousel link
+
+	const generateLink = category => {
+		switch (category) {
+			case 'ketrin':
+				return '/xizmatlar/ketrin/standart'
+			case 'arenda':
+				return '/xizmatlar/arenda'
+			case 'cofebreak':
+				return '/xizmatlar/cofe-break'
+			default:
+				return '/'
+		}
+	}
+
 	return (
 		<Box>
 			{!carouselData?.length ? (
@@ -97,7 +112,7 @@ const MainCarousel = () => {
 									</Text>
 									{/* circle arrow img */}
 									<Box>
-										<Link href={'/'}>
+										<Link href={generateLink(carouselItem.category)}>
 											<ChakraImage
 												as={Image}
 												src={RightArrow}
