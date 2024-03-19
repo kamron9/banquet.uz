@@ -45,7 +45,12 @@ const Footer = () => {
 								<Image src={instagramIcon} alt={'instagram'} height={32} />
 							</a>
 							<a href={'#'}>
-								<Image src={facebookIcon} alt={'facebook'} height={25} />
+								<Image
+									src={facebookIcon}
+									alt={'facebook'}
+									style={{ height: '25px' }}
+									height={25}
+								/>
 							</a>
 						</Flex>
 					</GridItem>

@@ -92,12 +92,13 @@ const Table = () => {
 											onClick={() => changeActiveTab(id)}
 											key={id}
 											userSelect={'none'}
+											fontSize={{ base: '14px', md: '16px' }}
 											border={`${
 												activeTab?.id === id
 													? '1px solid green'
 													: '1px solid gray'
 											}`}
-											fontWeight={`${activeTab?.id === id ? 900 : 900}`}
+											fontWeight={`900`}
 											color={`${activeTab?.id === id ? 'green' : 'black'}`}
 											cursor={'pointer'}
 											borderRadius={'5px'}
@@ -123,11 +124,12 @@ const Table = () => {
 											? '1px solid green'
 											: '1px solid gray'
 									}`}
-									fontWeight={`${activeVariant === 'torburchak' ? 900 : 900}`}
+									fontWeight={`900`}
 									color={`${
 										activeVariant === 'torburchak' ? 'green' : 'black'
 									}`}
 									cursor={'pointer'}
+									fontSize={{ base: '14px', sm: '16px' }}
 									borderRadius={'5px'}
 									p={'10px'}
 								>

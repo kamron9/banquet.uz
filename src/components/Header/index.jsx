@@ -38,16 +38,24 @@ const Header = () => {
 						<Box as={'nav'} display={{ base: 'none', md: 'block' }}>
 							<List display={'flex'} alignItems={'center'} gap={'20px'}>
 								<ListItem>
-									<Link href={'/#about'}>{t('bizHaqimizda')}</Link>
+									<Link className='header-link' href={'/#about'}>
+										{t('bizHaqimizda')}
+									</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#statistic'}>{t('Statistika')}</Link>
+									<Link className='header-link' href={'/#statistic'}>
+										{t('Statistika')}
+									</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#gallery'}>{t('Galereya')}</Link>
+									<Link className='header-link' href={'/#gallery'}>
+										{t('Galereya')}
+									</Link>
 								</ListItem>
 								<ListItem>
-									<Link href={'/#contact'}>{t('Aloqa')}</Link>
+									<Link className='header-link' href={'/#contact'}>
+										{t('Aloqa')}
+									</Link>
 								</ListItem>
 							</List>
 						</Box>

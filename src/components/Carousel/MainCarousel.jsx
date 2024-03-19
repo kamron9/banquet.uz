@@ -50,7 +50,7 @@ const MainCarousel = () => {
 				></Skeleton>
 			) : (
 				<Carousel
-					// autoplay={true}
+					autoplay={true}
 					wrapAround={carouselData.length > 1}
 					pauseOnHover={true}
 					renderCenterLeftControls={carouselPreviousBtn}

@@ -3,9 +3,10 @@ import Header from '@/components/Header'
 import CalculateTotalProvider from '@/context/CalculateTotalProvider'
 import OurServiceModalProvider from '@/context/OurServiceModalProvider'
 import { ChakraProvider } from '@/providers/ChakraProvider'
+
 import { Container } from '@chakra-ui/react'
+
 import './globals.css'
-// import {Sahitya} from 'next/font/google'
 
 export const metadata = {
 	title: 'Create Next App',
