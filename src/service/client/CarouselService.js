@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default class CarouselService {
-	static url = 'https://shohruhbekk.pythonanywhere.com/corusel?format=json'
+	static url = 'https://ecb30c1beda01ce0.mokky.dev/carousel'
 
 	static async getCarouselData() {
 		try {

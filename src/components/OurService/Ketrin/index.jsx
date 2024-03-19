@@ -1,9 +1,9 @@
-import Table from '@/components/OurService/Offer/Products/Table/index'
+import Table from '@/components/OurService/Ketrin/Products/Table/index'
 import OrderModal from '@/components/modal/OrderModal'
 import { Box } from '@chakra-ui/react'
 import Menu from './Products/Menu/Menu'
 
-const Offer = () => {
+const Ketrin = () => {
 	return (
 		<Box>
 			<Menu />
@@ -16,4 +16,4 @@ const Offer = () => {
 	)
 }
 
-export default Offer
+export default Ketrin

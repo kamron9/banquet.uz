@@ -1,11 +1,11 @@
-import OurService from "@/components/OurService";
+import OurService from '@/components/OurService'
 
-const XizmatlarPage = () => {
-  return (
-    <div>
-      <OurService />
-    </div>
-  );
-};
+const AllService = () => {
+	return (
+		<div>
+			<OurService />
+		</div>
+	)
+}
 
-export default XizmatlarPage;
+export default AllService

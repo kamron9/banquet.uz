@@ -52,17 +52,19 @@ const ContactForm = ({ translations }) => {
 			bg={'var(--secondary-color)'}
 			flexDirection={'column'}
 			justifyContent={'center'}
-			px={{ base: '20px', sm: '60px', md: '30px', lg: '80px' }}
+			alignItems={'center'}
+			px={'20px'}
 			py={'50px'}
 			gap={'30px'}
 		>
-			<Text as={'span'} fontSize={{ base: '20px', md: '28px' }}>
+			<Text as={'span'} fontSize={{ base: '20px', md: '24px' }}>
 				{translations.FormSarlavha}
 			</Text>
 			<Box
 				as='form'
 				onSubmit={handleData}
 				display={'flex'}
+				width={'100%'}
 				flexDirection={'column'}
 				gap={'7px'}
 				maxW={'400px'}

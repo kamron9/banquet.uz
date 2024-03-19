@@ -7,6 +7,7 @@ import {
 	Skeleton,
 	Text,
 } from '@chakra-ui/react'
+import { useLocale } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import Carousel from 'nuka-carousel'
@@ -16,6 +17,7 @@ import { CarouselNextBtn, carouselPreviousBtn } from './CarouselSlides'
 
 const MainCarousel = () => {
 	const [carouselData, setCarouselData] = useState([])
+	const locale = useLocale()
 
 	useEffect(() => {
 		CarouselService.getCarouselData().then(res => setCarouselData(res))
@@ -50,8 +52,8 @@ const MainCarousel = () => {
 							overflow={'hidden'}
 						>
 							<Image
-								src={carouselItem.image}
-								alt={carouselItem.title}
+								src={carouselItem?.img}
+								alt={carouselItem?.title?.uz}
 								width={1000}
 								height={400}
 								draggable={false}
@@ -75,7 +77,7 @@ const MainCarousel = () => {
 									width={'100%'}
 									textTransform={'capitalize'}
 								>
-									{carouselItem.title}
+									{carouselItem.title && carouselItem?.title[locale]}
 								</Heading>
 								<Box
 									display={'flex'}
@@ -91,7 +93,7 @@ const MainCarousel = () => {
 										className={'carousel-text'}
 										display={{ base: 'none', sm: 'block' }}
 									>
-										{carouselItem.description}
+										{carouselItem.desc[locale]}
 									</Text>
 									{/* circle arrow img */}
 									<Box>
