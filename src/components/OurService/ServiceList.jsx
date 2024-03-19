@@ -1,22 +1,19 @@
 'use client'
 import { useOurServiceModal } from '@/context/OurServiceModalProvider'
-import { Grid, GridItem, Text } from '@chakra-ui/react'
+import { List, ListItem, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 const ServiceList = ({ listLanguage }) => {
 	const { onOpen } = useOurServiceModal()
 	return (
-		<Grid
-			// gridTemplateRows={'repeat(1,200px)'}
-			gridTemplateColumns={{
-				base: 'repeat(1,300px)',
-				sm: 'repeat(2,1fr)',
-				md: 'repeat(3,1fr)',
-				xl: 'repeat(3,350px)',
-			}}
-			justifyContent={{ base: 'center', sm: 'start' }}
+		<List
+			display={'flex'}
+			flexWrap={'wrap'}
+			justifyContent={{ base: 'center', md: 'flex-start' }}
+			alignContent={'start'}
 			gap={'20px'}
 		>
-			<GridItem
+			<ListItem
+				maxW={'350px'}
 				overflow={'hidden'}
 				className={'our-service-list__item'}
 				onClick={onOpen}
@@ -38,8 +35,12 @@ const ServiceList = ({ listLanguage }) => {
 				>
 					{listLanguage.ketrin}
 				</Text>
-			</GridItem>
-			<GridItem overflow={'hidden'} className={'our-service-list__item'}>
+			</ListItem>
+			<ListItem
+				maxW={'350px'}
+				overflow={'hidden'}
+				className={'our-service-list__item'}
+			>
 				<Image
 					src={'/rent.avif'}
 					alt={'rent'}
@@ -57,8 +58,12 @@ const ServiceList = ({ listLanguage }) => {
 				>
 					{listLanguage.arenda}
 				</Text>
-			</GridItem>
-			<GridItem overflow={'hidden'} className={'our-service-list__item'}>
+			</ListItem>
+			<ListItem
+				maxW={'350px'}
+				overflow={'hidden'}
+				className={'our-service-list__item'}
+			>
 				<Image
 					src={'/cofe-break.jpg'}
 					alt={'rent'}
@@ -76,8 +81,8 @@ const ServiceList = ({ listLanguage }) => {
 				>
 					{listLanguage.coffee}
 				</Text>
-			</GridItem>
-		</Grid>
+			</ListItem>
+		</List>
 	)
 }
 

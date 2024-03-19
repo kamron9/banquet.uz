@@ -12,7 +12,11 @@ const OurService = () => {
 	}
 	return (
 		<Box>
-			<Heading size={'lg'} mb={'30px'}>
+			<Heading
+				size={'lg'}
+				mb={'30px'}
+				textAlign={{ base: 'center', md: 'start' }}
+			>
 				{t('Sarlavha')}
 			</Heading>
 			<ServiceList listLanguage={listLanguage} />
