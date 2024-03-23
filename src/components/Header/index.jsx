@@ -13,7 +13,6 @@ import LanguageMenu from './LanguageMenu'
 
 const Header = () => {
 	const t = useTranslations('IndexPage.Header')
-
 	return (
 		<header className={'header'}>
 			<Container maxW={'1400px'}>

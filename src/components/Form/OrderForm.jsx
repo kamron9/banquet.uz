@@ -1,4 +1,5 @@
 'use client'
+import { useCalculateTotalContext } from '@/context/CalculateTotalProvider'
 import {
 	Box,
 	Button,
@@ -9,16 +10,36 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 
-const OrderForm = () => {
+const OrderForm = ({ amoutPeople }) => {
 	const [phoneNumber, setPhoneNumber] = useState('')
+	const { selectedProduct, selectedTable } = useCalculateTotalContext()
+	console.log(amoutPeople)
+	const handleSubmitData = e => {
+		e.preventDefault()
+		const data = {
+			name: e.target[0].value,
+			phone: e.target[1].value,
+			selectedProduct,
+			selectedTable,
+			amoutPeople,
+		}
+		console.log(data)
+	}
 
 	return (
-		<Box display={'flex'} flexDirection={'column'} gap={'10px'}>
+		<Box
+			onSubmit={handleSubmitData}
+			as='form'
+			display={'flex'}
+			flexDirection={'column'}
+			gap={'10px'}
+		>
 			<FormControl>
 				<Input
 					height={'45px'}
 					type='text'
 					maxLength={'20'}
+					required
 					placeholder='Isminginzni kiriting'
 				/>
 			</FormControl>
@@ -28,7 +49,9 @@ const OrderForm = () => {
 					<Input
 						type='tel'
 						height={'100%'}
+						required
 						value={phoneNumber.replace(/\D/g, '')}
+						minLength={9}
 						maxLength='9'
 						placeholder='Telefon raqamingiz'
 						onChange={e => setPhoneNumber(e.target.value)}
@@ -37,7 +60,9 @@ const OrderForm = () => {
 			</FormControl>
 
 			<Box textAlign={'center'}>
-				<Button colorScheme={'purple'}>Yuborish</Button>
+				<Button type='submit' colorScheme={'purple'}>
+					Yuborish
+				</Button>
 			</Box>
 		</Box>
 	)

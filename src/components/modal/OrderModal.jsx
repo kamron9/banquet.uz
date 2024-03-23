@@ -27,6 +27,7 @@ import OrderForm from '../Form/OrderForm'
 function OrderModal() {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	const { selectedProduct, selectedTable } = useCalculateTotalContext()
+	const [amoutPeople, setAmoutPeople] = useState(10)
 	return (
 		<>
 			<Button onClick={onOpen} colorScheme={'purple'} variant={'outline'}>
@@ -57,14 +58,34 @@ function OrderModal() {
 							selectedItem={selectedTable?.variant}
 						/>
 						<Divider my={'10px'} />
-						<TotalPricing
-							selectedProduct={selectedProduct}
-							selectedTable={selectedTable}
-						/>
+						{/* selecting count of people */}
+						<Flex
+							columnGap={'10px'}
+							flexWrap={'wrap'}
+							alignContent={'start'}
+							alignItems={'center'}
+						>
+							<Text fontSize={'lg'}>Kishi sonini kiriting:</Text>
+							{/* number input */}
+							<NumberInput
+								size='md'
+								value={amoutPeople}
+								// defaultValue={amoutPeople}
+								min={10}
+								max={1000}
+								onChange={e => setAmoutPeople(e?.target?.value)}
+							>
+								<NumberInputField />
+								<NumberInputStepper>
+									<NumberIncrementStepper />
+									<NumberDecrementStepper />
+								</NumberInputStepper>
+							</NumberInput>
+						</Flex>
 					</ModalBody>
 					<ModalFooter>
 						<Box width={'100%'}>
-							<OrderForm />
+							<OrderForm amoutPeople={amoutPeople} />
 						</Box>
 					</ModalFooter>
 				</ModalContent>
@@ -73,40 +94,6 @@ function OrderModal() {
 	)
 }
 export default OrderModal
-
-// including total price and amount of people
-const TotalPricing = ({ selectedProduct, selectedTable }) => {
-	return (
-		<Box>
-			{/* choose count of people */}
-			<Flex
-				columnGap={'10px'}
-				flexWrap={'wrap'}
-				alignContent={'start'}
-				alignItems={'center'}
-			>
-				<Text fontSize={'lg'}>Kishi sonini kiriting:</Text>
-				{/* number input */}
-				<NumberInput size='md' defaultValue={10} min={10} max={1000}>
-					<NumberInputField />
-					<NumberInputStepper>
-						<NumberIncrementStepper />
-						<NumberDecrementStepper />
-					</NumberInputStepper>
-				</NumberInput>
-			</Flex>
-			{/* calculate total price */}
-			<Flex alignItems={'center'} gap={'7px'} mt={'10px'}>
-				<Text fontSize={'lg'}>Umumiy summa:</Text>
-				<Text as={'b'} fontSize={'19px'}>
-					130000 so'm
-				</Text>
-			</Flex>
-		</Box>
-	)
-}
-
-
 
 const FlexContent = ({ text, selectedItem }) => {
 	return (
