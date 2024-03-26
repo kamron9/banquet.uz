@@ -8,7 +8,7 @@
 			"Xizmatlar": "Xizmatlar"
 		},
 		"bizHaqimizda": {
-			"Sarlavha":"Biz Haqimizda",
+			"Sarlavha": "Biz Haqimizda",
 			"Matn": "Biz xorijda ta’lim olish bo’yicha abuturentlarga ko’maklashuvchi kompaniyamiz. Bizning maqsadimiz \"Barcha talabalarga ularning kelib chiqishi yoki ijtimoiy sharoitlaridan qat'i nazar, mukammal ta'lim orqali eng yaxshi imkoniyat beriladi\". Biz muntazam ravishda turli xorijiy treninglar, ko'rgazmalarda qatnashamiz va butun dunyo bo'ylab hamkorlar bilan shartnomalar tuzamiz"
 		},
 		"Statistika": "Statistika",
@@ -16,17 +16,7 @@
 
 		"Aloqa": {
 			"Sarlavha": "Bog'lanish",
-			"FormSarlavha": "Ariza qoldirish uchun",
-			"IsmFamiliya": "Ism Familiyangizni kiriting",
-			"Telfon": "Telefon raqamingizni kiriting",
-			"yuborishBtn": "Yuborish",
-			"FormMsg": {
-				"error": {
-					"ism-kiriting": "Iltimos ismingizni kiriting",
-					"telfon-kiriting": "telefon raqam 9 tadan kam  bo'masligi kerak"
-				},
-				"success": "so'rovingiz uchun raxmat 24 soat ichida operatorimiz siz bilan bog'lanadi"
-			}
+			"FormSarlavha": "Ariza qoldirish uchun"
 		},
 		"Footer": {
 			"IjtimoiyTarmoq": "Ijtimoiy tarmoqlarimiz",

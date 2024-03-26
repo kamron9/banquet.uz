@@ -12,20 +12,6 @@ const Contact = () => {
 		objectPosition: 'center',
 	}
 
-	const translations = {
-		FormSarlavha: t('FormSarlavha'),
-		ismFamiliya: t('IsmFamiliya'),
-		Telfon: t('Telfon'),
-		yuborishBtn: t('yuborishBtn'),
-		formMsg: {
-			error: {
-				ism: t('FormMsg.error.ism-kiriting'),
-				tel: t('FormMsg.error.telfon-kiriting'),
-			},
-			success: t('FormMsg.success'),
-		},
-	}
-
 	return (
 		<Box as={'section'} mb={'30px'} id='contact'>
 			<Heading size={'lg'} mb={'30px'} id='contact'>
@@ -53,7 +39,7 @@ const Contact = () => {
 					<Heading size={'md'} mb={'20px'}>
 						{t('FormSarlavha')}
 					</Heading>
-					<ContactForm translations={translations} />
+					<ContactForm />
 				</Box>
 			</Flex>
 		</Box>

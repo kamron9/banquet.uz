@@ -11,7 +11,9 @@ const Ketrin = () => {
 				<Table />
 				{/* <ExtraService /> */}
 			</Box>
-			<OrderModal />
+			<Box width={'100%'} textAlign={'end'}>
+				<OrderModal />
+			</Box>
 		</Box>
 	)
 }

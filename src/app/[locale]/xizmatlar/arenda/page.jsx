@@ -1,9 +1,7 @@
-import React from 'react'
+import Rent from '@/components/OurService/Rent'
 
 const Arenda = () => {
-	return (
-		<div>Arenda</div>
-	)
+	return <Rent />
 }
 
 export default Arenda

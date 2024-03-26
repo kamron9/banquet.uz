@@ -2,6 +2,7 @@
 import { useOurServiceModal } from '@/context/OurServiceModalProvider'
 import { List, ListItem, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 const ServiceList = ({ listLanguage }) => {
 	const { onOpen } = useOurServiceModal()
 	return (
@@ -41,46 +42,50 @@ const ServiceList = ({ listLanguage }) => {
 				overflow={'hidden'}
 				className={'our-service-list__item'}
 			>
-				<Image
-					src={'/rent.avif'}
-					alt={'rent'}
-					width={400}
-					height={300}
-					className={'service-img'}
-				/>
-				<Text
-					as={'b'}
-					fontSize={'20px'}
-					color={'white'}
-					position={'absolute'}
-					bottom={'10px'}
-					left={'10px'}
-				>
-					{listLanguage.arenda}
-				</Text>
+				<Link href={'/xizmatlar/arenda'}>
+					<Image
+						src={'/rent.avif'}
+						alt={'rent'}
+						width={400}
+						height={300}
+						className={'service-img'}
+					/>
+					<Text
+						as={'b'}
+						fontSize={'20px'}
+						color={'white'}
+						position={'absolute'}
+						bottom={'10px'}
+						left={'10px'}
+					>
+						{listLanguage.arenda}
+					</Text>
+				</Link>
 			</ListItem>
 			<ListItem
 				maxW={'350px'}
 				overflow={'hidden'}
 				className={'our-service-list__item'}
 			>
-				<Image
-					src={'/cofe-break.jpg'}
-					alt={'rent'}
-					width={400}
-					height={300}
-					className={'service-img'}
-				/>
-				<Text
-					as={'b'}
-					fontSize={'20px'}
-					color={'white'}
-					position={'absolute'}
-					bottom={'10px'}
-					left={'10px'}
-				>
-					{listLanguage.coffee}
-				</Text>
+				<Link href={'/xizmatlar/cofe-break'}>
+					<Image
+						src={'/cofe-break.jpg'}
+						alt={'rent'}
+						width={400}
+						height={300}
+						className={'service-img'}
+					/>
+					<Text
+						as={'b'}
+						fontSize={'20px'}
+						color={'white'}
+						position={'absolute'}
+						bottom={'10px'}
+						left={'10px'}
+					>
+						{listLanguage.coffee}
+					</Text>
+				</Link>
 			</ListItem>
 		</List>
 	)
