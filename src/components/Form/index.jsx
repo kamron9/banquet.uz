@@ -6,15 +6,17 @@ import {
 	Input,
 	InputGroup,
 	InputLeftAddon,
-	Text,
 	useToast,
 } from '@chakra-ui/react'
+import { useLocale } from 'next-intl'
 import { useState } from 'react'
+import { lang } from './lang'
 
-const ContactForm = ({ translations }) => {
+const ContactForm = ({ category }) => {
 	const toast = useToast()
 	const [numberInputValue, setNumberInputValue] = useState('')
 	const [nameInputValue, setNameInputValue] = useState('')
+	const locale = useLocale()
 
 	// form submit
 	const handleData = async e => {
@@ -22,12 +24,12 @@ const ContactForm = ({ translations }) => {
 
 		if (nameInputValue.length < 1) {
 			toast({
-				title: translations.formMsg.error.ism,
+				title: lang.FormMsg.error.ismKiriting[locale],
 				status: 'error',
 			})
 		} else if (numberInputValue.length < 9) {
 			toast({
-				title: translations.formMsg.error.tel,
+				title: lang.FormMsg.error.telefonKiriting[locale],
 				status: 'error',
 			})
 		} else {
@@ -36,7 +38,7 @@ const ContactForm = ({ translations }) => {
 				phone: numberInputValue,
 			})
 			toast({
-				title: translations.formMsg.success,
+				title: lang.FormMsg.success[locale],
 				status: 'success',
 			})
 			setNameInputValue('')
@@ -45,24 +47,11 @@ const ContactForm = ({ translations }) => {
 	}
 
 	return (
-		<Box
-			w={'100%'}
-			h={'100%'}
-			display={'flex'}
-			bg={'var(--secondary-color)'}
-			flexDirection={'column'}
-			justifyContent={'center'}
-			alignItems={'center'}
-			px={'20px'}
-			py={'50px'}
-			gap={'30px'}
-		>
-			<Text as={'span'} fontSize={{ base: '20px', md: '24px' }}>
-				{translations.FormSarlavha}
-			</Text>
+		<>
 			<Box
 				as='form'
 				onSubmit={handleData}
+				autoComplete='off'
 				display={'flex'}
 				width={'100%'}
 				flexDirection={'column'}
@@ -74,7 +63,7 @@ const ContactForm = ({ translations }) => {
 					value={nameInputValue}
 					name='full_name'
 					height={'45px'}
-					placeholder={translations.ismFamiliya}
+					placeholder={lang.IsmFamiliya[locale]}
 					bg={'white'}
 				/>
 				<InputGroup height={'45px'}>
@@ -86,18 +75,18 @@ const ContactForm = ({ translations }) => {
 						height={'100%'}
 						value={numberInputValue.replace(/\D/g, '')}
 						inputMode='numeric'
-						placeholder={translations.Telfon}
+						placeholder={lang.Telefon[locale]}
 						maxLength={9}
 						bg={'white'}
 					/>
 				</InputGroup>
 				<Box textAlign={'end'}>
 					<Button colorScheme={'purple'} type='submit' width={'fit-content'}>
-						{translations.yuborishBtn}
+						{lang.yuborishBtn[locale]}
 					</Button>
 				</Box>
 			</Box>
-		</Box>
+		</>
 	)
 }
 

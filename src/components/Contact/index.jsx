@@ -1,4 +1,4 @@
-import ContactForm from '@/components/Form/ContactForm'
+import ContactForm from '@/components/Form'
 import { Box, Image as ChakraImage, Flex, Heading } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -39,7 +39,20 @@ const Contact = () => {
 					width={{ base: '100%', md: '50%' }}
 					style={imgStyle}
 				/>
-				<Box width={{ base: '100%', md: '50%' }}>
+				<Box
+					width={{ base: '100%', md: '50%' }}
+					bg={'var(--secondary-color)'}
+					display={'flex'}
+					flexDirection={'column'}
+					justifyContent={'center'}
+					alignItems={'center'}
+					px={'20px'}
+					py={'50px'}
+					gap={'30px'}
+				>
+					<Heading size={'md'} mb={'20px'}>
+						{t('FormSarlavha')}
+					</Heading>
 					<ContactForm translations={translations} />
 				</Box>
 			</Flex>

@@ -60,14 +60,6 @@ const Menu = () => {
 								color: 'green',
 								border: '1px solid green',
 								rounded: 'md',
-								_before: {
-									content: `''`,
-									backgroundImage: `url(/assets/icons/check-circle.png)`,
-									width: '20px',
-									backgroundSize: 'cover',
-									height: '20px',
-									marginRight: '10px',
-								},
 							}}
 							border={'1px solid rgb(244 245 247)'}
 							rounded={'md'}
