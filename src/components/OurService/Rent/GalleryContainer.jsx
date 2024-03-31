@@ -10,7 +10,7 @@ const GalleryContainer = ({ rentData, title }) => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <Box width={"100%"}>
+    <Box width={"100%"} mb={"50px"}>
       <Text as={"span"} fontSize={"1.5rem"}>
         {title}
       </Text>

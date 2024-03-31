@@ -28,7 +28,9 @@ const Rent = () => {
       >
         arenda xizmati
       </Heading>
-      <GalleryContainer rentData={tableData} title={"stol va stullar"} />
+      <GalleryContainer rentData={tableData} title={"Stol va Stullar"} />
+      <GalleryContainer rentData={tableData} title={"Posudalar"} />
+      <GalleryContainer rentData={tableData} title={"Boshqa Jixozlar"} />
     </div>
   );
 };
