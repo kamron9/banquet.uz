@@ -10,7 +10,7 @@ const Table = async () => {
   }
 };
 
-const RentService = {
+const TableService = {
   Table,
 };
-export default RentService;
+export default TableService;

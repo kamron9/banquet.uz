@@ -1,0 +1,21 @@
+
+
+/*
+    gallery style
+*/
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .gallery-img {
+        height: 200px;
+    }
+}
