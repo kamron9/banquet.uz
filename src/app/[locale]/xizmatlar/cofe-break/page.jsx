@@ -1,5 +1,6 @@
+"use client";
 const CofeBreak = () => {
-	return <div>CofeBreak</div>
-}
+  return <div>CofeBreak</div>;
+};
 
-export default CofeBreak
+export default CofeBreak;
