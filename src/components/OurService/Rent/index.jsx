@@ -6,12 +6,17 @@ import "./style.css";
 import tableService from "@/service/server/TableService";
 import GalleryContainer from "@/components/OurService/Rent/GalleryContainer";
 import { useEffect, useState } from "react";
+import OrderModal from "@/components/modal/OrderModal";
 const Rent = () => {
   const [tableData, setTableData] = useState([]);
 
   const getTableData = async () => {
-    const data = await tableService.Table();
-    setTableData(data);
+    try {
+      const data = await tableService.Table();
+      setTableData(data);
+    } catch (e) {
+      console.log(e);
+    }
   };
   useEffect(() => {
     getTableData();
@@ -31,6 +36,7 @@ const Rent = () => {
       <GalleryContainer rentData={tableData} title={"Stol va Stullar"} />
       <GalleryContainer rentData={tableData} title={"Posudalar"} />
       <GalleryContainer rentData={tableData} title={"Boshqa Jixozlar"} />
+      <OrderModal />
     </div>
   );
 };

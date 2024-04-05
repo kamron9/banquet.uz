@@ -10,9 +10,13 @@ const Table = () => {
   const [activeVariant, setActiveVariant] = useState("torburchak");
   // get table data from server
   const getTableData = async () => {
-    const data = await TableService.Table();
-    setTableData(data);
-    setActiveTab(data[0]);
+    try {
+      const data = await TableService.Table();
+      setTableData(data);
+      setActiveTab(data[0]);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   useEffect(() => {

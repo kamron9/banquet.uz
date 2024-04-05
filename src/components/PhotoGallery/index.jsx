@@ -1,4 +1,3 @@
-"use server";
 import getPhotoGallery from "@/service/server/PhotoGalleryService";
 import { Box, Heading } from "@chakra-ui/react";
 import { getTranslations } from "next-intl/server";
@@ -17,7 +16,7 @@ const PhotoGallery = async () => {
 
       <Box className={styles.galleryScroller}>
         <Box className={styles.galleryScroller__inner_reversed}>
-          {photoData.map((data) => (
+          {photoData?.map((data) => (
             <Image
               key={data.id}
               draggable={false}
@@ -32,7 +31,7 @@ const PhotoGallery = async () => {
         </Box>
 
         <Box className={styles.galleryScroller__inner}>
-          {photoData.map((data) => (
+          {photoData?.map((data) => (
             <Image
               key={data.id}
               className={styles.galleryImg}
