@@ -8,7 +8,9 @@ body {
 	scroll-behavior: smooth;
 	scroll-padding: 5rem;
 }
-
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--font-manrope) !important;
+}
 .header {
 	border-bottom: 1px solid #0f172a1a;
 	height: fit-content;
