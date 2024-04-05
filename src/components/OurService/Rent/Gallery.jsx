@@ -10,7 +10,7 @@ const Gallery = ({ imagesData, onClick }) => {
       gap={{ base: "5px", sm: "20px" }}
       templateColumns={{
         base: "repeat(2,1fr)",
-        sm: "repeat(auto-fit,minmax(15rem,1fr))",
+        md: "repeat(auto-fit,minmax(15rem,1fr))",
       }}
     >
       {imagesData.length > 0 &&
