@@ -20,7 +20,7 @@ const ServiceList = ({ listLanguage }) => {
 				onClick={onOpen}
 			>
 				<Image
-					src={'/event.avif'}
+					src={'/assets/images/catering.jpeg'}
 					alt={'event'}
 					width={400}
 					height={300}
@@ -44,7 +44,7 @@ const ServiceList = ({ listLanguage }) => {
 			>
 				<Link href={'/xizmatlar/arenda'}>
 					<Image
-						src={'/rent.avif'}
+						src={'/assets/images/rent.webp'}
 						alt={'rent'}
 						width={400}
 						height={300}
