@@ -6,13 +6,14 @@ import {
   Input,
   InputGroup,
   InputLeftAddon,
+  useDisclosure,
   useToast,
 } from "@chakra-ui/react";
 import { useLocale } from "next-intl";
 import { useState } from "react";
 import { lang } from "./lang";
 
-const ContactForm = ({ category }) => {
+const ContactForm = ({ category, onClose }) => {
   const toast = useToast();
   const [numberInputValue, setNumberInputValue] = useState("");
   const [nameInputValue, setNameInputValue] = useState("");
@@ -45,6 +46,7 @@ const ContactForm = ({ category }) => {
       });
     } else {
       sendForm();
+      onClose(true);
       toast({
         title: lang.FormMsg.success[locale],
         status: "success",
