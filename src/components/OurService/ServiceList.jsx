@@ -69,7 +69,7 @@ const ServiceList = ({ listLanguage }) => {
 			>
 				<Link href={'/xizmatlar/cofe-break'}>
 					<Image
-						src={'/cofe-break.jpg'}
+						src={'/assets/images/cofe-break.jpg'}
 						alt={'rent'}
 						width={400}
 						height={300}
