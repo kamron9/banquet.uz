@@ -25,8 +25,6 @@ export default function RootLayout({ children, params: { locale } }) {
 		<html lang={locale}>
 			<head>
 				{/* <Primary Meta Tags */}
-				<title>banquet.uz</title>
-				<meta name='title' content='banquet.uz' />
 
 				{/*  Open Graph / Facebook */}
 				<meta property='og:type' content='website' />
@@ -36,10 +34,7 @@ export default function RootLayout({ children, params: { locale } }) {
 					property='og:description'
 					content="Xar xil turdagi banketlar va tadbirlarni o'tkazish xizmaltari. Tadbirlar uchun arenda xizmatlari"
 				/>
-				<meta
-					property='og:image'
-					content='https://metatags.io/images/meta-tags.png'
-				/>
+				<meta property='og:image' content='/assets/images/meta.jpg' />
 
 				{/*  Twitter  */}
 				<meta property='twitter:card' content='summary_large_image' />
@@ -49,10 +44,7 @@ export default function RootLayout({ children, params: { locale } }) {
 					property='twitter:description'
 					content="Xar xil turdagi banketlar va tadbirlarni o'tkazish xizmaltari. Tadbirlar uchun arenda xizmatlari"
 				/>
-				<meta
-					property='twitter:image'
-					content='https://metatags.io/images/meta-tags.png'
-				/>
+				<meta property='twitter:image' content='assets/images/meta.jpg' />
 			</head>
 			<body suppressHydrationWarning={true} className={manrope.className}>
 				<ChakraProvider>
