@@ -1,11 +1,16 @@
-import Ketrin from '@/components/OurService/Ketrin'
+import Ketrin from "@/components/OurService/Ketrin";
 
-const KetrinPage = () => {
-	return (
-		<div>
-			<Ketrin />
-		</div>
-	)
-}
+export const metadata = {
+  title: "Keytering",
+  description:
+    "Keytering xizmati,xar xil turdagi tadbir va banketlarni o'tkazish xizmatlari",
+};
+const KeyteringPage = () => {
+  return (
+    <div>
+      <Ketrin />
+    </div>
+  );
+};
 
-export default KetrinPage
+export default KeyteringPage;
