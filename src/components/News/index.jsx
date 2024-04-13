@@ -2,13 +2,16 @@ import React from "react";
 import NewsService from "@/service/server/NewsService";
 import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
 const News = async () => {
   const newsData = (await NewsService.getNews()) || [];
+  const locale = useLocale();
   return (
     <Box as={"section"} my={"80px"}>
       <Heading size={"lg"} mb={"30px"}>
-        So'ngi yangiliklar
+        {locale === "uz" ? "Yangiliklar" : "Новости"}
       </Heading>
       <Grid
         gap={"25px"}

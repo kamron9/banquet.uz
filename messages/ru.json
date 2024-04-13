@@ -29,6 +29,24 @@
 			"Ketrin": "Кейтеринг",
 			"Arenda": "Аренде",
 			"Coffee": "Кофе-брейк"
+		},
+		"Menu":{
+			"Sarlavha": "Наше меню",
+			"Sum": "сум"
 		}
+	},
+	"Yangiliklar": {
+		"Sarlavha": "Новости"
+	},
+	"Stollar": {
+		"Sarlavha": "Стол и стулья",
+		"Turi": "Виды столов и стульев"
+	},
+	"Posudalar": {
+		"Sarlavha": "Посуда"
+	},
+	"Boshqa": {
+		"Sarlavha": "Другое оборудование"
 	}
+
 }

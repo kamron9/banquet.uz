@@ -1,34 +1,50 @@
 {
-	"IndexPage": {
-		"Header": {
-			"bizHaqimizda": "Biz Haqimizda",
-			"Statistika": "Statistika",
-			"Galereya": "Galereya",
-			"Aloqa": "Bog'lanish",
-			"Xizmatlar": "Xizmatlar"
-		},
-		"bizHaqimizda": {
-			"Sarlavha": "Biz Haqimizda",
-			"Matn": "Biz xorijda ta’lim olish bo’yicha abuturentlarga ko’maklashuvchi kompaniyamiz. Bizning maqsadimiz \"Barcha talabalarga ularning kelib chiqishi yoki ijtimoiy sharoitlaridan qat'i nazar, mukammal ta'lim orqali eng yaxshi imkoniyat beriladi\". Biz muntazam ravishda turli xorijiy treninglar, ko'rgazmalarda qatnashamiz va butun dunyo bo'ylab hamkorlar bilan shartnomalar tuzamiz"
-		},
-		"Statistika": "Statistika",
-		"TadbirdanLavhalar": "Tadbirdan lavhalar",
-
-		"Aloqa": {
-			"Sarlavha": "Bog'lanish",
-			"FormSarlavha": "Ariza qoldirish uchun"
-		},
-		"Footer": {
-			"IjtimoiyTarmoq": "Ijtimoiy tarmoqlarimiz",
-			"Xarita": "Xarita"
-		}
-	},
-	"ServicePage": {
-		"Sarlavha": "Bizning Xizmatlar",
-		"servislar": {
-			"Ketrin": "Keytering xizmati",
-			"Arenda": "Arenda xizmati",
-			"Coffee": "Coffee break xizmati"
-		}
-	}
+  "IndexPage": {
+    "Header": {
+      "bizHaqimizda": "Biz Haqimizda",
+      "Statistika": "Statistika",
+      "Galereya": "Galereya",
+      "Aloqa": "Bog'lanish",
+      "Xizmatlar": "Xizmatlar"
+    },
+    "bizHaqimizda": {
+      "Sarlavha": "Biz haqimizda",
+      "Matn": "Biz xorijda ta’lim olish bo’yicha abuturentlarga ko’maklashuvchi kompaniyamiz. Bizning maqsadimiz \"Barcha talabalarga ularning kelib chiqishi yoki ijtimoiy sharoitlaridan qat'i nazar, mukammal ta'lim orqali eng yaxshi imkoniyat beriladi\". Biz muntazam ravishda turli xorijiy treninglar, ko'rgazmalarda qatnashamiz va butun dunyo bo'ylab hamkorlar bilan shartnomalar tuzamiz"
+    },
+    "Statistika": "Statistika",
+    "TadbirdanLavhalar": "Tadbirdan lavhalar",
+    "Aloqa": {
+      "Sarlavha": "Bog'lanish",
+      "FormSarlavha": "Ariza qoldirish uchun"
+    },
+    "Footer": {
+      "IjtimoiyTarmoq": "Ijtimoiy tarmoqlarimiz",
+      "Xarita": "Xarita"
+    }
+  },
+  "ServicePage": {
+    "Sarlavha": "Bizning Xizmatlar",
+    "servislar": {
+      "Ketrin": "Keytering xizmati",
+      "Arenda": "Arenda xizmati",
+      "Coffee": "Coffee break xizmati"
+    },
+    "Menu": {
+      "Sarlavha": "Bizning Menyu",
+      "Sum": "so'm"
+    }
+  },
+  "Yangiliklar": {
+    "Sarlavha": "Yangiliklar"
+  },
+  "Stollar": {
+    "Sarlavha": "Stol va stullar",
+    "Turi": "Stol va stullar turi"
+  },
+  "Posudalar": {
+    "Sarlavha": "Posudalar"
+  },
+  "Boshqa": {
+	  "Sarlavha": "Boshqa jihozlar"
+  }
 }

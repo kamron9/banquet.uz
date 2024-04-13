@@ -2,9 +2,12 @@
 import { useState, useEffect } from "react";
 import { Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 import FeedbackService from "@/service/server/feedbackService";
+import { useLocale, useTranslations } from "next-intl";
+import Iframe from "react-iframe";
 
 const CustomersFeedBack = () => {
   const [feedback, setFeedback] = useState([]);
+  const locale = useLocale();
   const getFeedback = async () => {
     try {
       const feedbackData = await FeedbackService.getFeedback();
@@ -19,7 +22,7 @@ const CustomersFeedBack = () => {
   return (
     <Box my={"80px"}>
       <Heading as={"h2"} size={"lg"} mb={"30px"}>
-        Mijorlarimiz fikrlari
+        {locale === "uz" ? "Mijozlarimiz fikrlari" : "Отзывы наших клиентов"}
       </Heading>
       <Grid
         gap={"10px"}
