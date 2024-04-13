@@ -20,7 +20,6 @@ function OrderModal() {
       <Button onClick={onOpen} colorScheme={"purple"} variant={"outline"}>
         {locale === "uz" ? "Buyurtma berish" : "Заказать"}
       </Button>
-
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent>
