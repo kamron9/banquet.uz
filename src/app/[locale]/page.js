@@ -5,6 +5,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import Statistic from "@/components/Statistic";
 
 import News from "@/components/News";
+import CustomersFeedBack from "@/components/CustomersFeedback";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutCompany />
       <Statistic />
       <PhotoGallery />
+      <CustomersFeedBack />
       <Contact />
     </div>
   );
