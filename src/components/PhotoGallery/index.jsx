@@ -8,8 +8,8 @@ const PhotoGallery = async () => {
   const photoData = (await getPhotoGallery()) || [];
   const t = await getTranslations("IndexPage");
   return (
-    <Box as={"section"} mb={"80px"}>
-      <Heading size={"lg"} mb={"30px"} id="gallery">
+    <Box as="section" mb={"80px"}>
+      <Heading as={"h2"} size={"lg"} mb={"30px"} id="gallery">
         {t("TadbirdanLavhalar")}
       </Heading>
       {/*    gallery */}

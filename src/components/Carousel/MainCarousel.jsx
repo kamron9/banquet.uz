@@ -49,7 +49,7 @@ const MainCarousel = () => {
   };
 
   return (
-    <Box>
+    <Box as={"section"}>
       {!carouselData?.length ? (
         <Skeleton
           className="carousel-skeleton"

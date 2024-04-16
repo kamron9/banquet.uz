@@ -1,6 +1,7 @@
 {
 	"IndexPage": {
 		"Header": {
+			"yangiliklar": "Новости",
 			"bizHaqimizda": "О нас",
 			"Statistika": "Статистика",
 			"Galereya": "Галерея",
@@ -47,6 +48,10 @@
 	},
 	"Boshqa": {
 		"Sarlavha": "Другое оборудование"
+	},
+	"NotFound": {
+		"Sarlavha": "Страница не найдена",
+		"Link": "На главную"
 	}
 
 }

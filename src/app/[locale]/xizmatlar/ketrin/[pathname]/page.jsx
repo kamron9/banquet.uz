@@ -6,11 +6,7 @@ export const metadata = {
     "Keytering xizmati,xar xil turdagi tadbir va banketlarni o'tkazish xizmatlari",
 };
 const KeyteringPage = () => {
-  return (
-    <div>
-      <Ketrin />
-    </div>
-  );
+  return <Ketrin />;
 };
 
 export default KeyteringPage;

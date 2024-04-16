@@ -24,12 +24,10 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <head>
-        {/* <Primary Meta Tags */}
-
         {/*  Open Graph / Facebook */}
         <meta
           name="keywords"
-          content="keytering, keytering xizmati, banket,tadbir,tadbirlar,arenda, arenda posuda, catering"
+          content="keytering.uz ketrin,keytering, keytering xizmati, banket,tadbir,tadbirlar,arenda, arenda posuda, catering cateyring,  keytering xizmati tashkent"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://banquet.uz/" />

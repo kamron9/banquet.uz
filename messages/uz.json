@@ -1,6 +1,7 @@
 {
   "IndexPage": {
     "Header": {
+      "yangiliklar": "Yangiliklar",
       "bizHaqimizda": "Biz Haqimizda",
       "Statistika": "Statistika",
       "Galereya": "Galereya",
@@ -46,5 +47,9 @@
   },
   "Boshqa": {
 	  "Sarlavha": "Boshqa jihozlar"
+  },
+  "NotFound": {
+    "Sarlavha": "Sahifa topilmadi",
+    "Link": "Bosh sahifaga qaytish"
   }
 }

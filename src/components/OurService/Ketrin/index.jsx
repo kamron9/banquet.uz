@@ -5,7 +5,7 @@ import Menu from "./Products/Menu/Menu";
 
 const Ketrin = () => {
   return (
-    <Box>
+    <Box as="section">
       <Menu />
       <Box mb={"60px"}>
         <Table />

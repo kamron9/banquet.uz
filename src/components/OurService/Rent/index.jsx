@@ -39,7 +39,7 @@ const Rent = () => {
   };
 
   return (
-    <div>
+    <section>
       <Heading
         color={"purple"}
         size={"lg"}
@@ -55,7 +55,7 @@ const Rent = () => {
       <Box textAlign={"end"}>
         <OrderModal />
       </Box>
-    </div>
+    </section>
   );
 };
 

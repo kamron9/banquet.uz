@@ -6,7 +6,7 @@ const Statistic = () => {
   const t = useTranslations("IndexPage");
   return (
     <Box as="section" mb={"80px"} id="statistic">
-      <Heading size={"lg"} mb={"30px"}>
+      <Heading as={"h2"} size={"lg"} mb={"30px"}>
         {t("Statistika")}
       </Heading>
       {/* statistic card */}

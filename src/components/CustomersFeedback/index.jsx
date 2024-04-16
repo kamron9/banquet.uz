@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import { Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 import FeedbackService from "@/service/server/feedbackService";
-import { useLocale, useTranslations } from "next-intl";
-import Iframe from "react-iframe";
+import { useLocale } from "next-intl";
 
 const CustomersFeedBack = () => {
   const [feedback, setFeedback] = useState([]);
@@ -20,7 +19,7 @@ const CustomersFeedBack = () => {
     getFeedback();
   }, []);
   return (
-    <Box my={"80px"}>
+    <Box my={"80px"} as="section">
       <Heading as={"h2"} size={"lg"} mb={"30px"}>
         {locale === "uz" ? "Mijozlarimiz fikrlari" : "Отзывы наших клиентов"}
       </Heading>

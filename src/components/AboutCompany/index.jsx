@@ -7,7 +7,7 @@ const AboutCompany = () => {
   const t = useTranslations("IndexPage.bizHaqimizda");
   return (
     <Box as="section" id={"about"} my={"80px"}>
-      <Heading size={"lg"} mb={"30px"}>
+      <Heading as={"h2"} size={"lg"} mb={"30px"}>
         {t("Sarlavha")}
       </Heading>
       <Box
