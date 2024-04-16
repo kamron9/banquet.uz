@@ -10,7 +10,6 @@ import { useTranslations } from "next-intl";
 
 import { Link } from "@/config/navigations";
 import LanguageMenu from "./LanguageMenu";
-import Image from "next/image";
 
 const Header = () => {
   const t = useTranslations("IndexPage.Header");

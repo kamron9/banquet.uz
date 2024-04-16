@@ -10,5 +10,5 @@ export const pathnames = {
   "/xizmatlar/ketrin": "/xizmatlar/ketrin",
 };
 export const locales = ["uz", "ru"];
-export const { Link, redirect, usePathname, useRouter, getPathname } =
+export const { Link, usePathname, useRouter } =
   createLocalizedPathnamesNavigation({ pathnames, locales });

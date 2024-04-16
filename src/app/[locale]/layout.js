@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header";
 import OurServiceModalProvider from "@/context/OurServiceModalProvider";
-import { ChakraProvider } from "@/providers/ChakraProvider";
+import { ChakraProvider } from "@/app/ChakraProvider";
 import { Container } from "@chakra-ui/react";
 import { Manrope } from "next/font/google";
 

@@ -6,7 +6,6 @@ import {
   Input,
   InputGroup,
   InputLeftAddon,
-  useDisclosure,
   useToast,
 } from "@chakra-ui/react";
 import { useLocale } from "next-intl";

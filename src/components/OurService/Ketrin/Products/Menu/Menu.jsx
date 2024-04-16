@@ -1,4 +1,3 @@
-// "use client";
 import { oddiyData } from "@/data/oddiyData";
 import {
   Box,

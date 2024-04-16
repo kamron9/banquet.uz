@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@/providers/ChakraProvider";
+import { ChakraProvider } from "@/app/ChakraProvider";
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
