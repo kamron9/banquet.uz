@@ -1,4 +1,3 @@
-
 :root {
 	--secondary-color: #f9f8f6;
 }
@@ -8,7 +7,12 @@ body {
 	scroll-behavior: smooth;
 	scroll-padding: 5rem;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--font-manrope) !important;
 }
 .header {
@@ -86,7 +90,7 @@ h1,h2,h3,h4,h5,h6{
 
 /* news section */
 
-.news-card__img{
+.news-card__img {
 	width: 100%;
 	height: 200px;
 	object-fit: cover;
@@ -116,7 +120,8 @@ h1,h2,h3,h4,h5,h6{
 
 .service-img {
 	width: 100%;
-	height: 100%;
+	height: 230px;
+
 	filter: brightness(80%);
 	transition: all 0.5s;
 	object-fit: cover;
@@ -124,10 +129,6 @@ h1,h2,h3,h4,h5,h6{
 .our-service-list__item:hover .service-img {
 	scale: 1.2;
 }
-
-
-
-
 
 /* remove type number input right side arrows */
 input[type='number']::-webkit-inner-spin-button {

@@ -4,9 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
-.zed
-.idea
+/.yarn/install-state.gz
+/.zed
+/.idea
 # testing
 /coverage
 
