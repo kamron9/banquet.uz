@@ -1,22 +1,28 @@
-import AboutCompany from "@/components/AboutCompany";
-import MainCarousel from "@/components/Carousel/MainCarousel";
-import Contact from "@/components/Contact";
-import PhotoGallery from "@/components/PhotoGallery";
-import Statistic from "@/components/Statistic";
+import Loader from '@/components/Loader/Loader'
+import dynamic from 'next/dynamic'
+import { Suspense, memo } from 'react'
 
-import News from "@/components/News";
-import CustomersFeedBack from "@/components/CustomersFeedback";
+const AboutCompany = dynamic(() => import('@/components/AboutCompany'))
+const MainCarousel = dynamic(() => import('@/components/Carousel/MainCarousel'))
+const Contact = dynamic(() => import('@/components/Contact'))
+const PhotoGallery = dynamic(() => import('@/components/PhotoGallery'))
+const Statistic = dynamic(() => import('@/components/Statistic'))
+const News = dynamic(() => import('@/components/News'))
+const CustomersFeedBack = dynamic(() =>
+	import('@/components/CustomersFeedback')
+)
 
-export default function Home() {
-  return (
-    <div>
-      <MainCarousel />
-      <News />
-      <AboutCompany />
-      <Statistic />
-      <PhotoGallery />
-      <CustomersFeedBack />
-      <Contact />
-    </div>
-  );
+function Home() {
+	return (
+		<Suspense fallback={<Loader />}>
+			<MainCarousel />
+			<News />
+			<AboutCompany />
+			<Statistic />
+			<PhotoGallery />
+			<CustomersFeedBack />
+			<Contact />
+		</Suspense>
+	)
 }
+export default memo(Home)

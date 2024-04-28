@@ -22,6 +22,7 @@ const Contact = () => {
 					as={Image}
 					src={callCenter}
 					alt={'callcenter'}
+					loading='lazy'
 					width={{ base: '100%', md: '50%' }}
 					style={imgStyle}
 				/>
