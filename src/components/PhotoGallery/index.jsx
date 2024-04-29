@@ -5,7 +5,7 @@ import Image from 'next/image'
 import styles from './style.module.css'
 
 const PhotoGallery = async () => {
-	const photoData = (await getPhotoGallery()) || []
+	let photoData = await getPhotoGallery() // get photo data
 	const t = await getTranslations('IndexPage')
 	return (
 		<Box as='section' mb={'80px'}>

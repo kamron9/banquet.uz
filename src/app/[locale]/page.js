@@ -1,16 +1,13 @@
 import Loader from '@/components/Loader/Loader'
-import dynamic from 'next/dynamic'
-import { Suspense, memo } from 'react'
+import { Suspense, lazy, memo } from 'react'
 
-const AboutCompany = dynamic(() => import('@/components/AboutCompany'))
-const MainCarousel = dynamic(() => import('@/components/Carousel/MainCarousel'))
-const Contact = dynamic(() => import('@/components/Contact'))
-const PhotoGallery = dynamic(() => import('@/components/PhotoGallery'))
-const Statistic = dynamic(() => import('@/components/Statistic'))
-const News = dynamic(() => import('@/components/News'))
-const CustomersFeedBack = dynamic(() =>
-	import('@/components/CustomersFeedback')
-)
+const AboutCompany = lazy(() => import('@/components/AboutCompany'))
+const MainCarousel = lazy(() => import('@/components/Carousel/MainCarousel'))
+const Contact = lazy(() => import('@/components/Contact'))
+const PhotoGallery = lazy(() => import('@/components/PhotoGallery'))
+const Statistic = lazy(() => import('@/components/Statistic'))
+const News = lazy(() => import('@/components/News'))
+const CustomersFeedBack = lazy(() => import('@/components/CustomersFeedback'))
 
 function Home() {
 	return (
@@ -19,7 +16,7 @@ function Home() {
 			<News />
 			<AboutCompany />
 			<Statistic />
-			<PhotoGallery />
+			{/* <PhotoGallery /> */}
 			<CustomersFeedBack />
 			<Contact />
 		</Suspense>
