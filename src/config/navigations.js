@@ -1,14 +1,14 @@
-import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
+import { createLocalizedPathnamesNavigation } from 'next-intl/navigation'
 
 // Default
 
 export const pathnames = {
-  "/": "/",
-  "/xizmatlar": "/xizmatlar",
-  "/xizmatlar/arenda": "/xizmatlar/arenda",
-  "/xizmatlar/cofe-break": "/xizmatlar/cofe-break",
-  "/xizmatlar/ketrin": "/xizmatlar/ketrin",
-};
-export const locales = ["uz", "ru"];
+	'/': '/',
+	'/xizmatlar': '/xizmatlar',
+	'/xizmatlar/arenda': '/xizmatlar/arenda',
+	'/xizmatlar/cofe-break': '/xizmatlar/cofe-break',
+	'/xizmatlar/ketrin': '/xizmatlar/ketrin',
+}
+export const locales = ['uz', 'ru']
 export const { Link, usePathname, useRouter } =
-  createLocalizedPathnamesNavigation({ pathnames, locales });
+	createLocalizedPathnamesNavigation({ pathnames, locales })

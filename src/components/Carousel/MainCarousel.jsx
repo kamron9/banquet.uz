@@ -51,7 +51,7 @@ const MainCarousel = () => {
 
 	return (
 		<Box as={'section'}>
-			{!carouselData?.length ? (
+			{!carouselData.length ? (
 				<Skeleton
 					className='carousel-skeleton'
 					w={'100%'}
