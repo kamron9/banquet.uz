@@ -1,9 +1,24 @@
-import FeedbackService from '@/service/server/feedbackService'
+'use client'
+import FeedbackService from '@/service/client/feedbackService'
 import { Box, Grid, GridItem, Heading } from '@chakra-ui/react'
 import { useLocale } from 'next-intl'
+import { useEffect, useState } from 'react'
+import ReactPlayer from 'react-player/youtube'
 
-const CustomersFeedBack = async () => {
-	const feedback = await FeedbackService.getFeedback()
+const CustomersFeedBack = () => {
+	const [feedback, setFeedback] = useState([])
+
+	const getFeedback = async () => {
+		try {
+			const feedback = await FeedbackService.getFeedback()
+			setFeedback(feedback)
+		} catch (error) {
+			console.log(error)
+		}
+	}
+	useEffect(() => {
+		getFeedback()
+	}, [])
 
 	const locale = useLocale()
 
@@ -22,13 +37,7 @@ const CustomersFeedBack = async () => {
 			>
 				{feedback?.map(video => (
 					<GridItem key={video.id}>
-						<iframe
-							width='100%'
-							height='250px'
-							src={video.url}
-							title={`video ${video.id}`}
-							allowFullScreen
-						></iframe>
+						<ReactPlayer url={video.url} width={'100%'} height={220} />
 					</GridItem>
 				))}
 			</Grid>

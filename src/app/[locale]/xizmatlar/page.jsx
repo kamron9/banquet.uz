@@ -1,6 +1,9 @@
 import Loader from '@/components/Loader/Loader'
-import { Suspense, lazy } from 'react'
-const OurService = lazy(() => import('@/components/OurService'))
+import dynamic from 'next/dynamic'
+const OurService = dynamic(() => import('@/components/OurService'), {
+	loading: () => <Loader />,
+	ssr: false,
+})
 export const metadata = {
 	title: 'Bizning xizmatlar',
 	description:
@@ -9,9 +12,9 @@ export const metadata = {
 
 const AllService = () => {
 	return (
-		<Suspense fallback={<Loader />}>
+		<>
 			<OurService />
-		</Suspense>
+		</>
 	)
 }
 
