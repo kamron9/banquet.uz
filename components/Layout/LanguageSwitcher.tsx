@@ -15,10 +15,10 @@ const LanguageSwitcher = () => {
 	return (
 		<Menubar>
 			<MenubarMenu>
-				<MenubarTrigger>{i18n.language === 'ru' ? 'ру' : 'uz'}</MenubarTrigger>
+				<MenubarTrigger>{i18n.language === 'uz' ? 'uz' : 'ру'}</MenubarTrigger>
 				<MenubarContent className='min-w-[60px]'>
 					<MenubarItem onClick={() => changeLanguage('uz')}>uz</MenubarItem>
-					<MenubarItem onClick={() => changeLanguage('ru')}>ру </MenubarItem>
+					<MenubarItem onClick={() => changeLanguage('ru')}>ру</MenubarItem>
 				</MenubarContent>
 			</MenubarMenu>
 		</Menubar>
@@ -28,14 +28,20 @@ const LanguageSwitcher = () => {
 export default LanguageSwitcher
 
 export const LanguageSwitcherMobile = () => {
-	const { changeLanguage } = useLanguage()
+	const { changeLanguage, i18n } = useLanguage()
 	return (
 		<div className='flex items-center justify-center gap-5'>
-			<Button variant={'default'} onClick={() => changeLanguage('uz')}>
+			<Button
+				variant={i18n.language === 'uz' ? 'default' : 'outline'}
+				onClick={() => changeLanguage('uz')}
+			>
 				uz
 			</Button>
-			<Button variant={'outline'} onClick={() => changeLanguage('ru')}>
-				ru
+			<Button
+				variant={i18n.language === 'ru' ? 'default' : 'outline'}
+				onClick={() => changeLanguage('ru')}
+			>
+				ру
 			</Button>
 		</div>
 	)

@@ -9,8 +9,10 @@ export const useLanguage = () => {
 	}
 
 	useEffect(() => {
-		document.documentElement.lang = i18n.language
-		localStorage.setItem('lang', i18n.language)
+		if (typeof window !== 'undefined') {
+			document.documentElement.lang = i18n.language
+			localStorage.setItem('lang', i18n.language)
+		}
 	}, [i18n.language])
 	return { t, changeLanguage, i18n }
 }
