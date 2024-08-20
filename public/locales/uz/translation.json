@@ -1,0 +1,49 @@
+{
+	"home": {
+		"services": "Xizmatlar",
+
+		"navbar": {
+			"about": "Biz haqimizda",
+			"news": "Yangiliklar",
+			"statistic": "Statistika",
+			"gallery": "Galereya",
+			"contact": "Aloqa"
+		},
+		"footer": {
+			"map": "Xarita",
+			"socials": "Мы в соцсетях"
+		}
+	},
+	"section": {
+		"contact": {
+			"title": "Ariza qoldirish uchun",
+			"input_name": "Ismingiz",
+			"input_phone": "Telefon raqamingiz",
+			"submit": "Yuborish"
+		}
+	},
+
+	"service": {
+		"title": "Bizning xizmatlarimiz",
+		"tarif": "Tariflar",
+		"catering": {
+			"title": "Keytering",
+			"base": "Oddiy",
+			"premium": "Premium",
+			"standard": "Standart"
+		},
+		"rentTitle": "Ijara",
+		"cofee": "Kofe-breyk"
+	},
+	"see": "Ko'rish",
+	"our-menu": "Bizning menyumiz",
+	"table-chairs": "Stol va stullar",
+	"dishes": "Idishalar",
+	"card": {
+		"calculated": "Mo'ljallangan",
+		"person": "kishiga",
+		"sum": "so'm"
+	},
+	"cofe-break": "Kofe-breyk xizmati",
+	"rent-service": "Ijara xizmati"
+}

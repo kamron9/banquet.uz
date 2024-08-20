@@ -1,0 +1,47 @@
+{
+	"home": {
+		"services": "Услуги",
+		"navbar": {
+			"about": "О нас",
+			"news": "Новости",
+			"statistic": "Статистика",
+			"gallery": "Галерея",
+			"contact": "Контакты"
+		},
+		"footer": {
+			"map": "Карта",
+			"socials": "Мы в соцсетях"
+		}
+	},
+	"section": {
+		"contact": {
+			"title": "Оставить заявку",
+			"input_name": "Ваше имя",
+			"input_phone": "Ваш номер телефона",
+			"submit": "Отправить"
+		}
+	},
+	"service": {
+		"title": "Наши услуги",
+		"tarif": "Тарифы",
+		"catering": {
+			"title": "Кейтеринг",
+			"base": "Обычный",
+			"premium": "Премиум",
+			"standard": "Стандарт"
+		},
+		"rentTitle": "Аренда",
+		"cofee": "Кофе-брейк"
+	},
+	"see": "Смотреть",
+	"our-menu": "Наше меню",
+	"table-chairs": "Стол и cтулья",
+	"dishes": "Посуда",
+	"card": {
+		"calculated": "Рассчитано",
+		"person": "человеку",
+		"sum": "сум"
+	},
+	"cofe-break": "Кофе-брейк услуга",
+	"rent-service": "Аренда услуга"
+}
